@@ -11,10 +11,11 @@ function Header({ handleClick }) {
       </div>
       <div></div>
       <div className=' text-slate-600 text-center grid grid-cols-4 items-center justify-end text-[14px] font-semilight'>
-
-        <button className=' hover:underline' onClick={() => handleClick('about')}>about</button>
-        <button className=' hover:underline'>projects</button>
-        <button className=' hover:underline' onClick={() => handleClick('contact')}>contact</button>
+        <div> <button className=' hover:underline' onClick={() => handleClick('about')}>about</button></div>
+       <div><button className=' hover:underline'>projects</button></div>
+       <div><button className=' hover:underline' onClick={() => handleClick('contact')}>contact</button></div>
+        
+      
 
       </div>
 
