@@ -4,12 +4,24 @@ import Header from './components/Header'
 import Landing from './components/Landing'
 import About from './components/About'
 import Contact from './components/Contact'
+import Experience from './components/Experience'
+
 
 function page() {
 
   const redirect1 = useRef(null)
   const redirect2 = useRef(null)
+  const redirect3 = useRef(null)
 
+
+  useEffect(() => {
+
+   ( async ()=> {
+      const LocomotiveScroll = (await import('locomotive-scroll')).default
+      const locomotiveScroll = new LocomotiveScroll()
+    })()
+
+  }, [])
 
 
   function handleClick(id) {
@@ -19,7 +31,9 @@ function page() {
       redirect1.current?.scrollIntoView({ behavior: 'smooth' })
     } else if (id == 'contact'){
        redirect2.current?.scrollIntoView({ behavior: 'smooth' })
-    }
+    }else if (id == 'experience'){
+      redirect3.current?.scrollIntoView({ behavior: 'smooth' })
+   }
      
 
   }
