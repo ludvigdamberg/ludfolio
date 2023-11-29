@@ -1,41 +1,95 @@
-import React, { forwardRef } from 'react'
-import Image from 'next/image'
-function Experience({ text }, ref) {
-    return (
-        <div ref={ref} className=' w-full h-screen p-20'>
-            <h1 className=' font-light text-[35px]'>EXPERIENCE</h1>
-            <div className=' grid grid-rows-3 w-full h-full'>
-                <div className=' font-extralight text-xs pt-4 pr-36'>
-                    With about one year of working experience in the programming world, I've had the privilege of gaining skills and knowledge through an array of different tasks.
+"use client"
+import React, { useEffect, useRef, useLayoutEffect, useState } from 'react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
+import Link from 'next/link';
+import modules from '../../../public/assets/content'
 
-                    At my previous workplaces, some of the work I've done includes developing a demo for a potential new version of a productivity optimization tool used by VOLVO, among others. We used Angular, TypeScript, and Python to bring simulated use-cases to life. At another company, I continued the development of a website project using NextJs, Firebase, Bootstrap, and Stripe to enhance its functionality and update it according to our clients wishes.
+function Experience() {
+  const effect1 = useRef(null);
+  const effect2 = useRef(null);
+  const effect3 = useRef(null);
 
-                    My work at companies like WeKnowIt and CPAC provided me with hands-on experience in version control and quality assurance. I faced the challenge of joining ongoing projects, understanding their intricacies, and contributing to their growth.
+  const names = ['WEKNOWIT', 'CPAC SYSTEMS', 'LITHEHACK'];
+  const images = ['wkit.svg', 'cpac.svg', 'lithehack.svg'];
+  const [index, setIndex] = useState(0);
+  const [Loaded, setLoaded] = useState(false)
 
-                    In my professional endeavors, as well as my years as a student, I’ve explored different languages and frameworks like: C++, Java, JavaScript/TypeScript, Python, React, React Native, NextJs, Angular, Express, Sanity, MongoDB, Git and Firebase to name a couple.
 
-                    I've also dabbled in creative tools such as Adobe Suite, Blender, Unreal Engine 4/5, Substance Painter and Figma.
+  useLayoutEffect(() => {
+    setLoaded(true)
+    gsap.registerPlugin(ScrollTrigger);
 
-                    Throughout my academic journey, I've developed a strong foundation in JavaScript and full-stack development, making it my main focus the last years.
-                </div>
-                <div className=' grid grid-cols-3 gap-2'>
-                    <div className=' p-4'>
-                        <Image src="../../assets/cpac.svg" alt='SVG Image' width={200} height={200} />
-                    </div>
-                    <div className='flex p-4 '>
-                        <Image src="../../assets/wkit.svg" alt='SVG Image' width={200} height={200} />
+    const timeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: effect1.current,
+        start: '300 bottom',
+        end: '+=200px bottom',
+        scrub: true,
 
-                    </div>
+      },
+    });
+    setTimeout(() => {
+const timeline2 = gsap.timeline({
+      scrollTrigger: {
+        trigger: effect2.current,
+        start: '400px bottom',
+        end: '+=400px bottom',
+        scrub: true,
+      },
+    });
 
-                    <div className='flex p-4'>
-                        <Image src="../../assets/liu.svg" alt='SVG Image' width={200} height={200} />
+    timeline2.from(effect2.current, { y: 50, opacity: 0 }).to(effect2.current, { y: 0, opacity: 1 }, 0);
 
-                    </div>
-                    <div></div>
+    },2000)
+    
 
-                </div>
+    timeline.from(effect1.current, { y: 50, opacity: 0 }).to(effect1.current, { y: 0, opacity: 1 }, 0);
+  }, []);
+
+  useEffect(() => {
+   
+  }, [])
+
+  return (
+
+  <> { Loaded? <div ref={effect2} className=' text-slate-800 h-screen w-full p-10 flex flex-col '>
+      <h1 className='text-[80px] font-black leading-tight z-40'>EXPERIENCE</h1>
+
+      <div className='grid grid-cols-2 gap-5 h-full z-40'>
+        <div className='border-t-2 border-slate-800 flex flex-col w-[70%]'>
+          {names.map((name, index) => (
+
+            <div
+              key={index}
+              onMouseOver={() => setIndex(index)}
+              className=' leading-tight border-b-2 border-slate-800 flex items-center px-2 text-[50px] font-black hover:bg-slate-800 ease-in-out duration-100 hover:text-white'
+            >
+              {name}
             </div>
+          ))}
+          <div className=' h-full my-5'>
+
+          </div>
         </div>
-    )
+        <div className=' flex flex-col w-[80%]'>
+          <div className=' pb-2  h-[35%] flex pl-16'>
+            < Image className='' src={`../../assets/${images[index]}`} alt='SVG Image' width={300} height={300} />
+          </div>
+          <div className=' text-slate-800 h-full my-5 flex flex-col px-14'>
+            <p className=' font-bold tracking-widest leading-relaxed text-2xl my-2'>{modules.headlines[index]} </p>
+            <p className=' font-normal tracking-wider leading-relaxed text-xl my-2'>{modules.bigtext[index]} </p>
+            <p className=' font-light text-base my-2'>{modules.smalltext[index]}</p>
+            <p className=' font-light text-3xl my-2 flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2'>{icon}</p>)}</p>
+
+          </div>
+        </div>
+      </div>
+    </div> : <div className=' h-screen w-full z-50'></div>}
+    </>
+  );
+
 }
-export default forwardRef(Experience)
+
+export default Experience;

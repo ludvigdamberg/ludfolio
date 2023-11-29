@@ -1,0 +1,22 @@
+.marquee__content {
+    animation: scroll 10s linear infinite;
+  }
+  .marquee__content2 {
+    animation: scroll2 10s linear infinite;
+  }
+  @keyframes scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 1rem));
+    }
+  }
+  @keyframes scroll2 {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(calc(0% + 1rem));
+    }
+  }
