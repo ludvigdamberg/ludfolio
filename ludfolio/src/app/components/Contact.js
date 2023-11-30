@@ -1,17 +1,19 @@
 "use client"
-import React, {useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
-
+import gsap from 'gsap'
+import Link from 'next/link'
 
 function Contact() {
 
+  const [mail, setMail] = useState(false)
   const form = useRef()
 
   const sendEmail = (e) => {
 
     e.preventDefault();
 
-    emailjs.sendForm(process.env.YOUR_SERVICE_ID, process.env.YOUR_TEMPLATE_ID, form.current, process.env.YOUR_PUBLIC_KEY)
+    emailjs.sendForm(process.env.NEXT_PUBLIC_YOUR_SERVICE_ID, process.env.NEXT_PUBLIC_YOUR_TEMPLATE_ID, form.current, process.env.NEXT_PUBLIC_YOUR_PUBLIC_KEY)
       .then((result) => {
         console.log(result.text);
       }, (error) => {
@@ -20,25 +22,61 @@ function Contact() {
 
   }
 
+
+
+  function option() {
+
+    const mail = gsap.timeline()
+
+
+    mail.to(".mail", {
+      y: -1000, duration: 0.5, ease: "power1.out", opacity: 0, onComplete: () => {
+        setMail(true)
+      }
+    })
+
+   
+  }
+
+  useEffect(() => {
+
+    const mail2 = gsap.timeline()
+
+    mail2.from(".form", { y: 20 })
+    mail2.to(".form", {opacity:0 , duration: 0.5, y: 0, ease: "back.out", opacity: 1, stagger: 0.075 })
+
+  },[mail])
+
   return (
-    <div className=' h-[100vh] w-[50%] bg-white p-10 text-slate-800 flex flex-col shadow-2xl z-10 border-2 '>
-      <p className=' font-black text-7xl '> CONTACT ME</p>
-      <p className=' text-3xl tracking-wider leading-relaxed text-slate-700 font-medium'>LET'S STAY IN CONTACT!</p>
-      <p className=' text-xl tracking-wide leading-normal text-slate-600'>
-        Send me a message about anything! Do you wonder anything about me, my career, this website, 
-      or professional opportunities? Please feel free to contact me through this form and I will answer within a week!
-      </p>
-      <div className=' h-full w-full flex bg-white mt-20 '>
-        <form className='flex flex-col w-[100%] ' ref={form} onSubmit={sendEmail}>
-          <label className=' font-extrabold text-2xl'>NAME</label>
-          <input className= ' border border-slate-400 outline-none bg-transparent h-8 p-2 mb-6 rounded-md w-[60%] bg-slate-100' type="text" name="from_name" />
-          <label className=' font-extrabold text-2xl'>YOUR EMAIL</label>
-          <input className= ' border border-slate-400 outline-none bg-transparent h-8 p-2 mb-6 rounded-md w-[60%] bg-slate-100' type="email" name="reply_to" />
-          <label className=' font-extrabold text-2xl'>MESSAGE</label>
-          <textarea className= ' border border-slate-400 outline-none bg-transparent h-48 p-2 rounded-md bg-slate-100' name="message" />
-          <input className=' font-black text-2xl h-20 w-48 hover:scale-110 ease-in-out duration-75 mt-6 border border-orange-300 rounded-md ' type="submit" value="Send" />
-        </form>
+    <div className=' w-full h-[90vh] flex justify-center items-center'>
+      {mail &&
+        <div className=' w-full h-full flex flex-col z-50 p-40 text-slate-800 border-slate-800 items-center'>
+          <h1 className=' form text-5xl italic font-black border-b border-t w-[50%]'>SEND A MAIL</h1>
+          <div className='form w-[50%] flex flex-row mt-10'> 
+          <label className=' font-bold italic text-xl my-auto '>NAME: </label>
+            <input className=' w-full h-10 outline-none ml-5 border-b' type='text' name='name' />
+          </div>
+          <div className='form w-[50%] flex flex-row items-center mt-10'> 
+          <label className=' font-bold italic text-xl '>EMAIL: </label>
+            <input className=' w-full  h-10 outline-none ml-5 border-b' type='text' name='name' />
+          </div>
+          <div className='form  w-[50%] flex flex-row  mt-10'> 
+          <label className=' font-bold italic text-xl '>MESSAGE: </label>
+            <textarea className=' w-full  h-[20vh] outline-none ml-5' type='text' name='name' > </textarea>
+          </div>
+        </div>
+      }
+
+      <div className=' mail w-[700px] h-[700px] absolute mx-auto z-20 bg-green-300 rounded-full flex flex-col justify-center text-slate-600'>
+        <div className=' mx-auto'>
+          Connect with me on LinkedIn
+        </div>
+        <div className=' mx-auto mt-10 flex flex-row w-full'>
+          <Link href="https://www.linkedin.com/in/ludvigdamberg/" className=' mx-10 ml-auto border border-slate-600 rounded-xl w-[20%] h-[5vh] justify-center flex items-center hover:shadow-xl ease-in-out duration-200 text-slate-600'>LinkedIn</Link>
+          <button onClick={() => option()} className=' mx-10 mr-auto border border-slate-600 rounded-xl w-[20%] h-[5vh] justify-center flex items-center hover:shadow-xl ease-in-out duration-200 text-slate-600'>Mail</button>
+        </div>
       </div>
+
     </div>
   )
 }

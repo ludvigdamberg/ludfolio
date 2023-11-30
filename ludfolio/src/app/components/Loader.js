@@ -21,9 +21,9 @@ function Loader() {
   }, [])
 
   return (
-    <div ref={loader} className=' h-screen w-screen bg-white text-black fixed top-0 left-0 z-50 text-9xl font-bold justify-center items-center flex overflow-hidden'>
+    <div ref={loader} className=' h-screen w-screen bg-slate-100 text-slate-800 fixed top-0 left-0 z-50 text-5xl font-bold justify-center items-center flex overflow-hidden'>
       <div className=''>
-        just a moment.
+        <h1>just a moment</h1>
       </div>
     </div>
   )

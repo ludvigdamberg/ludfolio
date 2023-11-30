@@ -3,13 +3,12 @@
 @tailwind utilities;
 
 html{
-font-family: var(--font-poppins);
 margin: 0;
 }
 
 
 h1 {
     -webkit-text-fill-color: transparent;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 1px;
 
 }

@@ -26,13 +26,15 @@ function page() {
         triggerRootMargin: '-1px -1px -1px -1px',
       })
 
-     
+    
+    })() 
+    
+    setLoaded(true)
       setTimeout(() => {
-        setLoaded(true)
         setIsLoading(false)
         document.body.style.cursor = "default"
       }, 2000)
-    })()
+      
   }, [])
 
 
