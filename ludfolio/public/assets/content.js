@@ -8,9 +8,9 @@ import { BiLogoTypescript } from "react-icons/bi";
 
 
 const headlines = [
-    'Fullstack Developer 2023-now (Part time)',
+    'Fullstack Developer 2023-current',
     'Summer Internship 2023 (Full time)',
-    'Programming Tutor 23/24 (Part time)'
+    'Programming Tutor 23/24'
 ]
 
 const bigtext = [
@@ -27,7 +27,7 @@ const smalltext = [
 
 const icons = [
     [
-        <IoLogoJavascript className=" text-yellow-300" />, <IoLogoFirebase />, <SiTailwindcss />, <DiMongodb />, <FaReact />, <SiNextdotjs />
+        <IoLogoJavascript />, <IoLogoFirebase />, <SiTailwindcss />, <DiMongodb />, <FaReact />, <SiNextdotjs />
     ],
     [
         <BiLogoTypescript />, <FaAngular />, <FaPython />
