@@ -7,7 +7,7 @@ const config = defineConfig({
 projectId: "dxtnan7v",
 dataset: "production",
 title: "ludfolio",
-apiVersion:"2023-11-27",
+apiVersion:"2023-12-04",
 basePath: "/admin",
 plugins: [deskTool()],
 schema: {types: [project]}

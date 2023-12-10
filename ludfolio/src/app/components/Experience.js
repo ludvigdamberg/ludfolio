@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import Link from 'next/link';
 import modules from '../../../public/assets/content'
+import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Experience() {
   const effect1 = useRef(null);
@@ -26,9 +27,8 @@ function Experience() {
       const timeline2 = gsap.timeline({
         scrollTrigger: {
           trigger: effect2.current,
-          start: '70% bottom',
-          end: '+=200px bottom',
-          scrub: true,
+          start: 'top center',
+
         },
       });
 
@@ -45,47 +45,48 @@ function Experience() {
 
     const exp = gsap.timeline()
 
-    exp.from(".experience", {opacity:0, x:30,}).to(".experience", {opacity:1, x:0, ease:"power1.out"})
+    exp.from(".experience", { opacity: 0, x: 15, duration: 0.3, stagger: 0.025, ease: "back.out" }).to(".experience", { opacity: 1, x: 0 })
 
   }
 
   return (
 
-    <> {Loaded ? <div ref={effect2} className=' text-slate-800 h-screen w-full p-10 flex flex-col '>
+    <>
+      {Loaded ? <div ref={effect2} className=' text-neutral-200 h-screen w-full p-20 flex flex-col'>
 
-      <div className='grid grid-cols-2 gap-5 h-full z-40'>
-        <div className='border-slate-800 flex flex-col w-[70%]'> 
-             <h1 className=' mt-20 text-6xl font-black leading-tight z-40 border-b border-slate-800 italic'>EXPERIENCE</h1>
 
+        <div className=' grid grid-cols-4 grid-rows-1 gap-1 p-1 w-full h-[40%] '>
+          <div className='leading-tight h-full rounded-xl border-2 flex w-full items-center justify-center font-black bg-neutral-900 '>
+            <p className=' text-5xl font-black z-40 bg-gradient-to-r bg-clip-text font-poppins text-indigo-500  '>EXPERIENCE</p>
+          </div>
           {names.map((name, index) => (
             <div
               key={index}
-              onMouseOver={() => Change(index)}
-              className=' leading-tight border-b border-slate-800 flex items-center px-2 text-[50px] font-black hover:bg-slate-800 ease-in-out duration-100 hover:text-white'
-            >
-              {name}
+              onMouseEnter={() => Change(index)}
+              className='group rounded-xl border-2 flex items-center h-full w-full text-3xl justify-center font-black hover:bg-neutral-900 ease-in-out duration-100 hover:text-violet-600'>
+              {name}<MdOutlineArrowOutward className='group-hover:rotate-45 ease-in-out duration-100 text-3xl ml-1' />
             </div>
           ))}
-          <div className=' h-full my-5'>
-
-          </div>
         </div>
-        <div className='experience flex flex-col w-[80%]'>
-          <div className=' pb-2  h-[35%] flex pl-16'>
+        <div className=' grid grid-rows-2 grid-cols-3 h-full w-full grid-flow-col gap-1 p-1'>
+          <div className=' experience  flex border-2 rounded-xl col-span-1 row-span-1 items-center justify-center'>
             < Image className='' src={`../../assets/${images[index]}`} alt='SVG Image' width={300} height={300} />
           </div>
-          <div className=' text-slate-800 h-full flex flex-col px-14'>
-            <p className=' font-bold tracking-widest leading-relaxed text-2xl my-2'>{modules.headlines[index]} </p>
-            <p className=' font-normal tracking-wider leading-relaxed text-xl my-2'>{modules.bigtext[index]} </p>
-            <p className=' font-light text-base my-2'>{modules.smalltext[index]}</p>
-            <p className=' font-light text-3xl my-2 flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2'>{icon}</p>)}</p>
-
+          <div className=' experience flex border-2 rounded-xl col-span-1 row-span-1 justify-center items-center'>
+            <p className=' font-light text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-400 hover:text-sky-500 ease-in-out duration-200'>{icon}</p>)}</p>
+          </div>
+          <div className=' experience h-full flex flex-col row-span-2 col-span-1 border-2 rounded-xl p-10'>
+            <p className=' font-extrabold tracking-widest leading-relaxed text-4xl text-sky-600  '>{modules.headlines[index]} </p>
+            <p className=' font-normal tracking-wide leading-loose text-xl '>{modules.bigtext[index]} </p>
+          </div>
+          <div className=' experience flex h-full w-full border-2 rounded-xl col-span-1 row-span-2 p-10 items-center'>
+           <p className=' font-normal tracking-wider leading-loose text-lg '>{modules.smalltext[index]}</p>
           </div>
         </div>
-      </div>
-    </div> : <div className=' h-screen w-full z-50'></div>}
+
+      </div > : <div className=' h-screen w-full z-50'></div>}
     </>
-  );
+  )
 
 }
 

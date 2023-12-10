@@ -5,7 +5,7 @@ export async function getProjects() {
     const client = createClient({
         projectId: "dxtnan7v",
         dataset: "production",
-        apiVersion: "2023-11-27",
+        apiVersion: "2023-12-04",
         useCdn: false
     })
 

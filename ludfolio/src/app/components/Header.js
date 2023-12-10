@@ -1,44 +1,69 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
-import About from './Experience'
-import { FaGithub, FaLinkedin, FaCode, FaLink } from "react-icons/fa6";
+import { useRouter } from 'next/navigation';
+import React, { useEffect, useState } from 'react'
+import { FaGithub, FaLinkedin, FaCode, FaHouse } from "react-icons/fa6";
+import { MdOutlineArrowOutward } from 'react-icons/md';
 
 
 function Header({ handleClick }) {
+
+  const [home,setHome] = useState(false)
+  const router = useRouter()
+
+  useEffect(() => {
+
+    const isHomePage = window.location.pathname === '/';
+
+    console.log(window.location.pathname)
+    console.log(isHomePage)
+
+    if (!isHomePage){ setHome(true)}
+
+  },[])
+
+
   return (
-    <div className=' w-full h-[7vh] grid grid-cols-4 p-5 bg-transparent '>
-      <div className='grid grid-cols-6 items-center font-extralight mx-3 text-xl z-20'>
-        <div className='group relative text-center text-slate-800'>
+    <div className=' text-neutral-100 w-full h-[7vh] grid grid-cols-4 p-5 bg-neutral-950 font-rubik'>
+      <div className='grid grid-cols-5 items-center font-extralight mx-3 text-xl z-20'>
+     { home &&  <div className='group relative text-center '>
+          <Link href="/">
+            <FaHouse className='  ease-in-out duration-200 m-auto text-neutral-100' />
+            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-medium text-sm text-neutral-400'>Home</p>
+          </Link>
+        </div>}
+        <div className='group relative text-center '>
           <Link href="https://github.com/ludvigdamberg">
-            <FaGithub className='icon  ease-in-out duration-200 m-auto'></FaGithub>
-            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-light text-sm '>Github</p>
+            <FaGithub className='  ease-in-out duration-200 m-auto text-neutral-100'></FaGithub>
+            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-medium text-sm text-neutral-400 '>Github</p>
           </Link>
 
         </div>
-        <p className=' m-auto'>/</p>
-        <div className='group relative text-center text-slate-800'>
+        <div className='group relative text-center '>
           <Link href="https://www.linkedin.com/in/ludvigdamberg">
-            <FaLinkedin className='icon  ease-in-out duration-200 m-auto'/>
-            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-light text-sm '>LinkedIn</p>
+            <FaLinkedin className=' ease-in-out duration-200 m-auto text-neutral-100' />
+            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-medium text-sm text-neutral-400 '>LinkedIn</p>
           </Link>
         </div>
-        <p className=' m-auto'>/</p>
-        <div className='group relative text-center text-slate-800'>
+        <div className='group relative text-center '>
           <Link href="https://github.com/ludvigdamberg/ludfolio">
-            <FaCode className='icon  ease-in-out duration-200 m-auto'/>
-            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-light text-sm'>Code</p>
+            <FaCode className=' ease-in-out duration-200 m-auto' />
+            <p className=' opacity-0 group-hover:top-6 ease-in-out duration-200 group-hover:opacity-100 absolute top-2 left-0 right-0 font-medium text-sm text-neutral-400'>Code</p>
           </Link>
         </div>
+        
       </div>
 
-      <div className=' text-slate-800 text-center grid grid-cols-4 items-center justify-end text-[14px] font-semilight'>
-     
+      <div className=' text-center grid grid-cols-4 items-center justify-end text-[14px] font-semilight'>
+
       </div>
-      <div>{/* Filler Container */}</div>
-      <div className='grid grid-cols-3 items-center font-light mx-3 text-lg z-20'> 
-      <Link href="">About</Link>
-      <Link href="/Projects">Projects</Link>
-      <Link href="/Contact">Contact</Link>
+      <div>
+        {/* Filler Container */}
+      </div>
+      <div className='font-extrabold mx-20 text-md z-20  flex flex-row justify-center text-neutral-400  my-auto font-poppins '>
+       
+        <Link className='  tracking-wider hover:text-neutral-100 ease-in-out duration-300 mx-8 my-2 flex' href="/Projects">Projects <MdOutlineArrowOutward className=' mx-1'/></Link>
+        <Link className='  tracking-wider hover:text-neutral-100 ease-in-out duration-300 mx-8 my-2 flex' href="/Contact">Contact <MdOutlineArrowOutward className=' mx-1'/></Link>
       </div>
     </div>
   )
