@@ -82,7 +82,6 @@ function page() {
       </div>
       <Header />
       <Landing />
-      <Info/>
       <About/>
       <Experience />
       <Footer />

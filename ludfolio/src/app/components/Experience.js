@@ -77,10 +77,10 @@ function Experience() {
           </div>
           <div className=' experience h-full flex flex-col row-span-2 col-span-1 border-2 rounded-xl p-10'>
             <p className=' font-extrabold tracking-widest leading-relaxed text-4xl text-sky-600  '>{modules.headlines[index]} </p>
-            <p className=' font-normal tracking-wide leading-loose text-xl '>{modules.bigtext[index]} </p>
+            <p className=' font-normal tracking-wide leading-relaxed text-md '>{modules.bigtext[index]} </p>
           </div>
           <div className=' experience flex h-full w-full border-2 rounded-xl col-span-1 row-span-2 p-10 items-center'>
-           <p className=' font-normal tracking-wider leading-loose text-lg '>{modules.smalltext[index]}</p>
+           <p className=' font-normal tracking-wider leading-relaxed text-sm '>{modules.smalltext[index]}</p>
           </div>
         </div>
 
