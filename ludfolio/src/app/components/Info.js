@@ -5,6 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useLayoutEffect } from 'react';
 import { FaGraduationCap } from "react-icons/fa";
 import Image from 'next/image';
+import Link from 'next/link';
+import { MdOutlineArrowOutward } from 'react-icons/md';
 
 function Info() {
 
@@ -54,9 +56,7 @@ function Info() {
           start:"center center",
           end:"+=300px",
           pin:true,
-          scrub:true,
-          markers:true,
-        }
+          scrub:true,        }
       })
 
       gsap.to(".pinner2", {
@@ -65,14 +65,12 @@ function Info() {
           start:"center center",
           end:"+=300px",
           pin:true,
-          scrub:true,
-          markers:true,
-        }
+          scrub:true,        }
       })
 
 
       gsap.to(".image", {
-        y: '20%', // Adjust the percentage as per your desired parallax effect
+        y: '30%', // Adjust the percentage as per your desired parallax effect
         ease: 'none',
         scrollTrigger: {
           trigger: ".image",
@@ -82,7 +80,7 @@ function Info() {
         },
       });
       gsap.to(".image2", {
-        y: '20%', // Adjust the percentage as per your desired parallax effect
+        y: '30%', // Adjust the percentage as per your desired parallax effect
         ease: 'none',
         scrollTrigger: {
           trigger: ".image2",
@@ -92,7 +90,7 @@ function Info() {
         },
       });
       gsap.to(".image3", {
-        y: '10%', // Adjust the percentage as per your desired parallax effect
+        y: '20%', // Adjust the percentage as per your desired parallax effect
         ease: 'none',
         scrollTrigger: {
           trigger: ".image3",
@@ -103,7 +101,7 @@ function Info() {
         },
       });
       gsap.to(".image4", {
-        y: '20%', // Adjust the percentage as per your desired parallax effect
+        y: '30%', // Adjust the percentage as per your desired parallax effect
         ease: 'none',
         scrollTrigger: {
           trigger: ".image4",
@@ -130,16 +128,17 @@ function Info() {
 
   return (
     <div className=' h-[100vh] w-full flex flex-col text-neutral-200 bg-neutral-950 '>
-      <div className=' h-screen w-full grid grid-cols-2 p-14 z-40 '>
-        <div className=' w-full h-full grid grid-cols-2'>
+      <div className=' h-screen w-full grid grid-cols-2 p-14 z-40 bg-neutral-950 rounded-3xl '>
+        <div className=' w-full h-full grid grid-cols-2 z-40 bg-lime-900'>
           <div className=' flex w-full h-full flex-col p-10'>
-            <p className=' font-rubik font-black text-5xl mt-20 text-orange-500'>ABOUT ME</p>
-            <div className=' flex w-[70%] h-[50%] mx-auto mt-20 text-sm tracking-widest leading-tight font-medium'>
+            <p className=' font-rubik font-black text-5xl mt-20 text-lime-500'>ABOUT ME</p>
+            <div className=' flex flex-col w-[70%] h-[50%] mx-auto mt-20 text-sm tracking-widest leading-tight font-medium'>
               <p className=' font-poppins'>{me[0]}</p>
             </div>
+            <Link href="/Projects" className=' group py-2 border-2 border-neutral-200 rounded-xl px-5 mr-auto text-center mt-auto bg-neutral-900 font-bold flex flex-row justify-center items-center hover:scale-105 ease-in-out duration-300 '>Recent Projects <MdOutlineArrowOutward className="group-hover:rotate-45 ease-in-out duration-300 mx-1 "/> </Link>
           </div>
           <div className=' flex w-full h-full flex-col p-10'>
-            <p className=' font-rubik font-black text-5xl mt-52 text-red-500'>AND...</p>
+            <p className=' font-rubik font-black text-5xl mt-52 text-indigo-500'>AND...</p>
             <div className=' flex w-[70%] h-[50%] mx-auto mt-auto mb-20 text-sm tracking-widest leading-tight font-medium'>
               <p className=' font-poppins'>{me[1]}</p>
             </div>
@@ -147,25 +146,32 @@ function Info() {
         </div>
 
 
-        <div className=' w-full h-full grid grid-cols-2 '>
+        <div className=' w-full h-full grid grid-cols-2 bg-indigo-900 '>
           <div className=' flex w-full h-full flex-col '>
 
-            <div className='container w-[350px] h-[350px] relative rounded-xl overflow-hidden parallax-image mx-auto mt-20  '>
-              <Image src={"/../../assets/gbg2.jpg"} fill={true} objectFit='cover' className='image scale-[140%]' />
+            <div className='group w-[80%] h-[30%] relative rounded-sm overflow-hidden parallax-image mx-auto mt-20  '>
+            <div className=' w-full h-full absolute z-50 flex text-neutral-200 rounded-sm opacity-0 group-hover:opacity-100 group-hover:backdrop-brightness-50 ease-in-out duration-150 '><p className=' mt-auto mr-auto ml-2 mb-2 text-xl font-black '>Fiskekyrka, Gothenburg</p></div>
+
+              <Image src={"/../../assets/gbg2.jpg"} fill={true} objectFit='cover' className='image scale-[160%]' />
             </div>
-            <div className='container w-[350px] h-[250px] relative rounded-xl overflow-hidden parallax-image mx-auto mt-24  '>
-              <Image src={"/../../assets/gbg3.jpg"} fill={true} objectFit='cover' className='image2 translate-x-10 scale-[140%]' />
+            <div className='group w-[80%] h-[30%] relative rounded-sm overflow-hidden parallax-image mx-auto mt-24  '>
+            <div className=' w-full h-full absolute z-50 flex text-neutral-200 rounded-sm opacity-0 group-hover:opacity-100 group-hover:backdrop-brightness-50 ease-in-out duration-150 '><p className=' mt-auto mr-auto ml-2 mb-2 text-xl font-black '>Poseidon, Gothenburg</p></div>
+
+              <Image src={"/../../assets/gbg3.jpg"} fill={true} objectFit='cover' className='image2 translate-x-10 scale-[160%]' />
             </div>
 
 
           </div>
           <div className=' flex w-full h-[full] flex-col'>
 
-            <div className='container w-[300px] h-[350px] relative rounded-xl overflow-hidden parallax-image mx-auto mt-10  '>
-              <Image src={"/../../assets/pb.jpeg"} fill={true} objectFit='cover' className='image3 scale-[120%]' />
+            <div className='group w-[80%] h-[45%] relative rounded-sm overflow-hidden parallax-image mx-auto mt-10  '>
+            <div className=' w-full h-full absolute z-50 flex text-neutral-200 rounded-sm opacity-0 group-hover:opacity-100 group-hover:backdrop-brightness-50 ease-in-out duration-150 '><p className=' mt-auto mr-auto ml-2 mb-2 text-xl font-black '>Me</p></div>
+
+              <Image src={"/../../assets/pb.jpeg"} fill={true} objectFit='cover' className='image3 scale-[140%]' />
             </div>
-            <div className='container w-[350px] h-[250px] relative rounded-xl overflow-hidden parallax-image mx-auto mt-20 hover:brightness-50 ease-in-out duration-150  '>
-              <Image src={"/../../assets/3.jpg"} fill={true} objectFit='cover' className='image4 scale-[140%]' />
+            <div className='group w-[75%] h-[25%] relative rounded-sm overflow-hidden parallax-image mx-auto mt-20  '>
+                <div className=' w-full h-full absolute z-50 flex text-neutral-200 rounded-sm opacity-0 group-hover:opacity-100 group-hover:backdrop-brightness-50 ease-in-out duration-150 '><p className=' mt-auto mr-auto ml-2 mb-2 text-xl font-black '>Vitamin D</p></div>
+              <Image src={"/../../assets/3.jpg"} fill={true} objectFit='cover' className='image4 scale-[160%]' />
             </div>
 
           </div>

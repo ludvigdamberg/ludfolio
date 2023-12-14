@@ -41,7 +41,7 @@ function Landing() {
             <h1 className=' font-poppins logo font-black text-7xl tracking-wider opacity-0'>DAMBERG</h1>
             <p className='  logo font-black text-7xl tracking-wider opacity-0 text-red-500'>.</p>
             </div>
-            <p className=' logo text-md font-thin mx-0.5  opacity-0 '>software engineer / media technology / computer science</p>
+            <p className=' logo text-md font-thin mx-0.5  opacity-0 '>software engineer / media technology / data science</p>
             <GoArrowDown className='icon mx-auto mt-10 text-3xl text-neutral-200  opacity-0' />
           </div>
         </div>
