@@ -24,8 +24,8 @@ function Header({ handleClick }) {
 
 
   return (
-    <div className=' text-neutral-100 w-full h-[7vh] grid grid-cols-4 p-5 bg-neutral-950 font-rubik'>
-      <div className='grid grid-cols-5 items-center font-extralight mx-3 text-xl z-20'>
+    <div className=' text-neutral-100 w-full h-[7vh] grid grid-cols-2 lg:grid-cols-4 p-5 bg-neutral-950 font-rubik'>
+      <div className='grid grid-cols-3 lg:grid-cols-5 items-center font-extralight mx-3 text-xl z-20'>
      { home &&  <div className='group relative text-center '>
           <Link href="/">
             <FaHouse className='  ease-in-out duration-200 m-auto text-neutral-100' />
@@ -54,16 +54,16 @@ function Header({ handleClick }) {
         
       </div>
 
-      <div className=' text-center grid grid-cols-4 items-center justify-end text-[14px] font-semilight'>
+      <div className=' text-center lg:grid hidden lg:grid-cols-4 items-center justify-end text-[14px] font-semilight'>
 
       </div>
-      <div>
+      <div className='hidden lg:block'>
         {/* Filler Container */}
       </div>
-      <div className='font-extrabold mx-20 text-md z-20  flex flex-row justify-center text-neutral-400  my-auto font-poppins '>
+      <div className='lg:font-extrabold lg:mx-20 text-xs lg:text-md z-20  flex flex-row justify-center text-neutral-400  my-auto font-poppins '>
        
-        <Link className='  tracking-wider hover:text-neutral-100 ease-in-out duration-300 mx-8 my-2 flex' href="/Projects">Projects <MdOutlineArrowOutward className=' mx-1'/></Link>
-        <Link className='  tracking-wider hover:text-neutral-100 ease-in-out duration-300 mx-8 my-2 flex' href="/Contact">Contact <MdOutlineArrowOutward className=' mx-1'/></Link>
+        <Link className='  lg:tracking-wider hover:text-neutral-100 ease-in-out duration-300 lg:mx-8 my-2 flex' href="/Projects">Projects <MdOutlineArrowOutward className=' mx-1'/></Link>
+        <Link className='  lg:tracking-wider hover:text-neutral-100 ease-in-out duration-300 lg:mx-8 my-2 flex' href="/Contact">Contact <MdOutlineArrowOutward className=' mx-1'/></Link>
       </div>
     </div>
   )

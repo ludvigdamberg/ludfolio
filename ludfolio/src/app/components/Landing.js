@@ -30,18 +30,18 @@ function Landing() {
 
   return (
     <div>
-      <div className=' h-screen w-full p-20 flex flex-col text-neutral-200'>
+      <div className=' h-screen w-full p-2 lg:p-20 flex flex-col text-neutral-200'>
         <div className=' flex flex-col '>
           <div className='  p-2 flex flex-col mx-auto h-[50vh] align-bottom justify-end z-30'>
             <div className='flex flex-row'>
-            <h1 className=' font-poppins  logo font-montserrat font-black text-8xl tracking-wider leading-[0.7] italic opacity-0'>LUDVIG</h1>
-            <p className='  logo font-black text-8xl tracking-wider leading-[0.7]  opacity-0 text-orange-500'>,</p>
+            <h1 className=' font-poppins  logo font-montserrat font-black text-7xl sm:text-8xl tracking-wider leading-[0.7] italic opacity-0'>LUDVIG</h1>
+            <p className='  logo font-black text-5xl sm:text-8xl tracking-wider leading-[0.7]  opacity-0 text-orange-500'>,</p>
             </div>
             <div className='flex flex-row'>
-            <h1 className=' font-poppins logo font-black text-7xl tracking-wider opacity-0'>DAMBERG</h1>
-            <p className='  logo font-black text-7xl tracking-wider opacity-0 text-red-500'>.</p>
+            <h1 className=' font-poppins logo font-black text-6xl sm:text-7xl tracking-wider opacity-0'>DAMBERG</h1>
+            <p className='  logo font-black text-5xl sm:text-7xl tracking-wider opacity-0 text-red-500'>.</p>
             </div>
-            <p className=' logo text-md font-thin mx-0.5  opacity-0 '>software engineer / media technology / data science</p>
+            <p className=' logo text-sm sm:text-lg font-thin mx-0.5  opacity-0 '>software engineer / media technology / data science</p>
             <GoArrowDown className='icon mx-auto mt-10 text-3xl text-neutral-200  opacity-0' />
           </div>
         </div>
