@@ -8,6 +8,7 @@ import { useSpring, animated } from 'react-spring';
 import Loader from './components/Loader'
 import About from './components/About'
 import Info from './components/Info'
+import Head from 'next/head'
 function page() {
 
 
@@ -59,7 +60,7 @@ function page() {
   return (
     <div onMouseMove={handleMouseMove} className='  bg-neutral-950 -z-20'>
       {isLoading && <Loader />}
-      <div className=' row-span-3 col-span-2 flex justify-center -z-20  '>
+      <div className=' justify-center -z-20 hidden lg:block '>
 
         <animated.div className=' rounded-full bg-indigo-600  w-[700px] h-[700px] blur-lg opacity-50' style={{
           position: 'fixed',
@@ -80,11 +81,9 @@ function page() {
         }}></animated.div>
 
       </div>
-      <Header />
+      <Header/>
       <Landing />
-      <About/>
-      <Experience />
-      <Footer />
+    
     </div>
   )
 }
