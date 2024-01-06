@@ -4,11 +4,9 @@ import Header from './components/Header'
 import Landing from './components/Landing'
 import Experience from './components/Experience'
 import Footer from './components/Footer'
+import Graph from './components/Graph'
 import { useSpring, animated } from 'react-spring';
 import Loader from './components/Loader'
-import About from './components/About'
-import Info from './components/Info'
-import Head from 'next/head'
 function page() {
 
 
@@ -22,19 +20,18 @@ function page() {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
       const locomotiveScroll = new LocomotiveScroll({
-        smoothWheel: true,
-        triggerRootMargin: '-1px -1px -1px -1px',
+        triggerRootMargin: '-1px -1px -1px -1px'
       })
 
-    
-    })() 
-    
+
+    })()
+
     setLoaded(true)
-      setTimeout(() => {
-        setIsLoading(false)
-        document.body.style.cursor = "default"
-      }, 700)
-      
+    setTimeout(() => {
+      setIsLoading(false)
+      document.body.style.cursor = "default"
+    }, 700)
+
   }, [])
 
 
@@ -58,32 +55,32 @@ function page() {
 
 
   return (
-    <div onMouseMove={handleMouseMove} className='  bg-neutral-950 -z-20'>
+    <div onMouseMove={handleMouseMove} className=' bg-neutral-950'>
       {isLoading && <Loader />}
-      <div className=' justify-center -z-20 hidden lg:block '>
-
-        <animated.div className=' rounded-full bg-indigo-600  w-[700px] h-[700px] blur-lg opacity-50' style={{
-          position: 'fixed',
+        <animated.div className=' rounded-full bg-indigo-600  w-[700px] h-[700px] hidden lg:block blur-lg opacity-50' style={{
+          position: 'fixed ',
           top: parallax.top1,
           left: parallax.left1,
         }}></animated.div>
 
-        <animated.div className=' rounded-full bg-indigo-600 w-[500px] h-[500px] blur-lg opacity-50 ' style={{
-          position: 'fixed',
+        <animated.div className=' rounded-full bg-indigo-600 w-[500px] h-[500px] hidden lg:block blur-lg opacity-50 ' style={{
+          position: 'fixed ',
           top: parallax.top2,
           left: parallax.left2,
         }}></animated.div>
 
-        <animated.div className=' rounded-full bg-indigo-600 w-[800px] h-[800px] blur-lg opacity-50' style={{
-          position: 'fixed',
+        <animated.div className=' rounded-full bg-indigo-600 w-[800px] h-[800px] hidden lg:block blur-lg opacity-50' style={{
+          position: 'fixed ',
           top: parallax.top3,
           left: parallax.left3,
         }}></animated.div>
 
-      </div>
-      <Header/>
-      <Landing />
-    
+     
+        <Header />
+        <Landing /> 
+        <Graph/>
+        <Experience/>
+        <Footer />
     </div>
   )
 }
