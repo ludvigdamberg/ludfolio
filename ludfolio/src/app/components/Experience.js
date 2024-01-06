@@ -3,7 +3,6 @@ import React, { useEffect, useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
-import Link from 'next/link';
 import modules from '../../../public/assets/content'
 import { MdOutlineArrowOutward } from "react-icons/md";
 
@@ -52,12 +51,12 @@ function Experience() {
   return (
 
     <>
-      {Loaded ? <div ref={effect2} className=' text-neutral-200 h-screen w-full p-20 flex flex-col'>
+      {Loaded ? <div ref={effect2} className=' text-neutral-200 h-screen w-full p-20 xl:flex xl:flex-col hidden '>
 
 
         <div className=' grid grid-cols-4 grid-rows-1 gap-1 p-1 w-full h-[40%] '>
           <div className='leading-tight h-full rounded-xl border-2 flex w-full items-center justify-center font-black bg-neutral-900 '>
-            <p className=' text-5xl font-black z-40 bg-gradient-to-r bg-clip-text font-poppins text-indigo-500  '>EXPERIENCE</p>
+            <p className=' text-4xl 2xl:text-5xl font-black z-40 bg-gradient-to-r bg-clip-text font-poppins text-indigo-500  '>EXPERIENCE</p>
           </div>
           {names.map((name, index) => (
             <div
