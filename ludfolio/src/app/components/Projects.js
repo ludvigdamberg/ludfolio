@@ -24,7 +24,7 @@ async function Projects() {
                  <div className='md:col-span-2 flex flex-col '>
                   <p className=' text-xl font-bold text-center md:text-left '>{project.name}</p>
                   <p className=' font-rubik text-md font-normal mt-5 tracking-wide leading-relaxed text-neutral-400 md:flex hidden '>{project.description}</p>
-                  <div className=' text-sm font-bold mt-auto md:flex hidden '>Tech Stack: {project.tech.map((t) => <p className='font-poppins font-light text-orange-500 mx-1'>{t}, </p>)}</div>
+                  <div className=' text-sm font-bold mt-auto md:flex hidden '>Tech Stack: {project.tech.map((t,index) => <p key={index} className='font-poppins font-light text-orange-500 mx-1'>{t}, </p>)}</div>
                 </div>
                 <div className=' w-[200px] h-[200px]  relative flex overflow-hidden mt-5 md:mt-0  rounded-xl mx-auto md:mx-0 md:ml-auto my-auto '>
                     {<Image src={project.image} alt={project.name} fill={true} className=' object-cover' />}
