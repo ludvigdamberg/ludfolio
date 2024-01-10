@@ -11,9 +11,8 @@ function Loader() {
     const tl = gsap.timeline()
     const tl2 = gsap.timeline()
 
-    tl.from(".load", { y: 120 })
     tl2.to(".heart", { duration:1, y:300 ,ease: "back.in"  })
-    tl.to(".load", { duration: 1, y: 0, ease: "back.out", opacity: 1, stagger: 0.1 })
+    tl.fromTo(".load",{y:120}, { duration: 1, y: 0, ease: "back.out", opacity: 1, stagger: 0.1 })
     tl.to(loader.current,{ height: 0, duration: 0.4,ease: "power1.in"})
    
   }, [])
