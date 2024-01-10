@@ -13,47 +13,47 @@
       { "id": "Backend", "label": "backend", "link": "#", "children": ["MongoDB","firebase","d3","Express"] },
 
 
-      { "id": "WeKnowIt", "label": "An IT consultant company where i work as a fullstack developer", "link": "#" },
-      { "id": "Lithehack", "label": "A student driven organisation, helping other student with coding", "link": "#" },
-      { "id": "CPAC", "label": "I worked as an intern at CPAC during the summer 2023. They are techdevelopers mostly for the automotive industry", "link": "#" },
-      { "id": "Ågrenska", "label": "I worked here as a personal assistant for kids with rare conditions", "link": "#" },
+      { "id": "WeKnowIt", "label": "An IT consultant company where i work as a fullstack developer", "link": "https://www.weknowit.se/" },
+      { "id": "Lithehack", "label": "A student driven organisation, helping other student with coding", "link": "https://liu.se/" },
+      { "id": "CPAC", "label": "I worked as an intern at CPAC during the summer 2023. They are techdevelopers mostly for the automotive industry", "link": "https://cpacsystems.se/" },
+      { "id": "Ågrenska", "label": "I worked here as a personal assistant for kids with rare conditions", "link": "https://www.agrenska.se/" },
       
       { "id": "C++", "label": "I've learned and worked in C++ through several university courses through labs and projects.", "link": "#" },
       { "id": "Java", "label": "", "link": "#" },
-      { "id": "JavaScript", "label": "", "link": "#" },
+      { "id": "JavaScript", "label": " This is the language in which im most proficient and the one i pick for code challenges.", "link": "#" },
       { "id": "Python", "label": "", "link": "#" },
-      { "id": "TypeScript", "label": "", "link": "#" },
-      { "id": "Ai", "label": "", "link": "#" },
-      { "id": "Machine learning", "label": "", "link": "#" },
+      { "id": "TypeScript", "label": "So far I have only used Ts lightly with respect to the functionality outside javascript, It was used at my recent internship at cpac.", "link": "https://www.typescriptlang.org/" },
+      { "id": "Ai", "label": "Through a few university procects and my master's thesis i will dig deeper into this subject", "link": "#" },
+      { "id": "Machine learning", "label": "Through a few university procects and my master's thesis i will dig deeper into this subject", "link": "#" },
 
 
-      { "id": "Graphical design", "label": "", "link": "#", "children": ["Adobe suite","3D modelling","Blender","Unreal Engine","Substance Painter"] },
-      { "id": "Adobe suite", "label": "", "link": "#" },
-      { "id": "3D modelling", "label": "", "link": "#" },
-      { "id": "Blender", "label": "", "link": "#" },
-      { "id": "Unreal Engine", "label": "", "link": "#" },
-      { "id": "Substance Painter", "label": "", "link": "#" },
+      { "id": "Graphical design", "label": "The subject of graphical design 2D and 3D", "link": "#", "children": ["Adobe suite","3D modelling","Blender","Unreal Engine","Substance Painter"] },
+      { "id": "Adobe suite", "label": " I have mainly worked in photoshop and illustrator, but also priemier", "link": "https://www.adobe.com/se/" },
+      { "id": "3D modelling", "label": " After a fair bit of game dev I have learnt 3D-modelling in Blender and the process of game ready models.", "link": "#" },
+      { "id": "Blender", "label": " A 3D-modelling software", "link": "https://www.blender.org/" },
+      { "id": "Unreal Engine", "label": " For all my game projects I have used Unreal Engine 4 and 5", "link": "https://www.unrealengine.com/en-US/" },
+      { "id": "Substance Painter", "label": " I have worked a little bit with creating model tectures in substance painter.", "link": "https://www.adobe.com/products/substance3d-painter.html?sdid=LLVYT6XG&mv=search&mv2=paidsearch&gad_source=1&gclid=Cj0KCQiAnfmsBhDfARIsAM7MKi2fyrqcaEKnqpMuYWJqS0OS9ONCPFQN8gfvhoEm2nt1177ZrwrVk5kaAmAQEALw_wcB" },
 
 
 
 
-      { "id": "Nextjs", "label": "A modern framework for web-development, this website is built with it.", "link": "#" },
-      { "id": "React", "label": "", "link": "#" },
-      { "id": "Tailwind css", "label": "", "link": "#" },
-      { "id": "Mui", "label": "", "link": "#" },
-      { "id": "BootStrap", "label": "", "link": "#" },
+      { "id": "Nextjs", "label": "A modern framework for web-development, this website is built with it.", "link": "https://nextjs.org/" },
+      { "id": "React", "label": " Frontend framework", "link": "https://react.dev/" },
+      { "id": "Tailwind css", "label": " A great way to substitute CSS which is very good for scalable projects", "link": "https://tailwindcss.com/" },
+      { "id": "Mui", "label": " A component library that I have used for a project or two", "link": "#" },
+      { "id": "BootStrap", "label": " A component library that I have used for a project or two", "link": "#" },
 
       { "id": "React Native", "label": "", "link": "#" },
-      { "id": "MongoDB", "label": "", "link": "#" },
-      { "id": "firebase", "label": "", "link": "#" },
-      { "id": "Express", "label": "", "link": "#" },
-      { "id": "d3", "label": "", "link": "#" },
-      { "id": "Angular", "label": "", "link": "#" },
-      { "id": "Git", "label": "", "link": "#" },
+      { "id": "MongoDB", "label": " A framework for storing and fetching backend data for applications with no SQL", "link": "#" },
+      { "id": "firebase", "label": "A framework for storing and fetching backend data for applications with no SQL", "link": "#" },
+      { "id": "Express", "label": " A backend framework for NodeJs ", "link": "#" },
+      { "id": "d3", "label": " A graph plotting library that was used to create this graph.", "link": "#" },
+      { "id": "Angular", "label": "Frontend framework using TypeScript", "link": "https://angular.io/" },
+      { "id": "Git", "label": " Version control", "link": "#" },
       {
         "id": "All Courses",
         "label": "All the university courses I've taken",
-        "link": "#",
+        "link": "https://liu.se/utbildning/program/6cmen",
         "children": [
           "Programming and Software Development",
           "Technology and Engineering",
@@ -247,12 +247,12 @@
 
 
       { "id": "Gaming", "label": "Ive Played a variety of games on different consoles, nowadays its mostly on PC", "link": "#" },
-      { "id": "football", "label": "", "link": "#" },
-      { "id": "coding", "label": "", "link": "#" },
-      { "id": "Books", "label": "", "link": "#" },
-      { "id": "Movies", "label": "", "link": "#" },
-      { "id": "Game development", "label": "", "link": "#" },
-      { "id": "Gym", "label": "", "link": "#" }
+      { "id": "football", "label": "I have played football on a semi-professional level during my teenage years.", "link": "#" },
+      { "id": "coding", "label": " My interest for coding picked up during my university studies which have only grown up until now", "link": "#" },
+      { "id": "Books", "label": " I like reading non-fiction mostly.", "link": "#" },
+      { "id": "Movies", "label": "Favorite producer: Hayao Miyazaki (Studio Ghibli)", "link": "#" },
+      { "id": "Game development", "label": "Early at university I wanted to learn game development, but realized that it was'nt my calling.", "link": "#" },
+      { "id": "Gym", "label": " As a great cut off to the slow lifestyle of coding I like to end as many days a week as possible with heavy lifting.", "link": "#" }
 
 
 
