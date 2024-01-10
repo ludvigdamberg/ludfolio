@@ -15,8 +15,8 @@ function Landing() {
 
     const tl = gsap.timeline()
 
-    tl.from(".logo", { y: 30 })
-    tl.to(".logo", { duration: 0.5, y: 0, ease: "back.out", delay: 2, opacity: 1, stagger: 0.05 })
+    tl.fromTo(".logo",{y:40}, { duration: 0.5, y: 0, delay:1.8, ease: "back.out", opacity: 1, stagger: 0.1 })
+
 
     setTimeout(() => {
 
