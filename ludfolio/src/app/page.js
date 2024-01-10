@@ -7,7 +7,7 @@ import Footer from './components/Footer'
 import Graph from './components/Graph'
 import { useSpring, animated } from 'react-spring';
 import Loader from './components/Loader'
-function page() {
+function Page() {
 
 
   const [Loaded, setLoaded] = useState(false)
@@ -80,4 +80,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

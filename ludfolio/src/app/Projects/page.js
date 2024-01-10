@@ -7,7 +7,7 @@ import Footer from '../components/Footer'
 import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 
-function page() {
+function Page() {
 
   useLayoutEffect(() => {
     (async () => {
@@ -33,4 +33,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

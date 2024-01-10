@@ -10,7 +10,7 @@ import gsap from 'gsap'
 import Link from 'next/link'
 import { MdOutlineArrowOutward } from 'react-icons/md'
 
-function page({ params }) {
+function Page({ params }) {
 
     const [project, setProject] = useState(0);
     const [loaded, setLoaded] = useState(false);
@@ -99,4 +99,4 @@ function page({ params }) {
     )
 }
 
-export default page
+export default Page

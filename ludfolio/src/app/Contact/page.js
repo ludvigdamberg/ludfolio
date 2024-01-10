@@ -2,7 +2,7 @@ import React from 'react'
 import Contact from '../components/Contact'
 import Header from '../components/Header'
 import Loader from '../components/Loader'
-function page() {
+function Page() {
   return (
     <div className=' flex flex-col'>
       <Loader/>
@@ -12,4 +12,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
