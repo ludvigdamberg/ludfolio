@@ -190,9 +190,9 @@ export default function Home() {
                     <div className=' w-[200px] h-[200px] relative rounded-full mx-auto mt-5 overflow-hidden'>
                         <Image src={"/assets/pb.jpeg"} alt='Loading' fill={true} objectFit='cover'/>
                     </div>
-                    <p className=' mt-8 text-center text-3xl font-black mx-10 text-orange-500'>What's this&quest;</p>
-                    <p className=' mt-8 text-center text-base font-light tracking-widest mx-10'>Here's a graph about me, take a look or search for a particular subject if you want to know something specific about me</p>
-                    <p className=' mt-8 text-center text-base font-semibold tracking-wide mx-10 text-blue-500'>OR... Skip this goof and check out my CV</p>
+                    <p className=' mt-8 text-center text-3xl font-black mx-10 text-orange-500'>What is this&quest;</p>
+                    <p className=' mt-8 text-center text-base font-light tracking-widest mx-10'>Here is a graph about me, take a look or search for a particular subject if you want to know something specific about me</p>
+                    <p className=' mt-8 text-center text-base font-semibold tracking-wide mx-10 text-blue-500'>OR Skip this goof and check out my CV</p>
                     <a className=' mx-auto border rounded-xl py-2 px-2 group font-regular tracking-wider mt-8 text-neutral-200 flex items-center hover:bg-neutral-200 hover:text-neutral-950 ease-in-out duration-150' href="/assets/CV_eng.pdf" download="your-portfolio.pdf" >Download Resume<FaDownload className=' mx-2' /></a>
 
                 </div>
