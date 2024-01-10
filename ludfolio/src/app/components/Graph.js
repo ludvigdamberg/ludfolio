@@ -214,7 +214,7 @@ export default function Home() {
                             updateGraphWithSearchTerm("")
                             inputRef.current.value = ""
                         }} className=' mb-4 ml-7 mt-auto mr-auto pr-8 font-light text-sm flex flex-row border rounded-xl py-3 items-center hover:text-slate-800 hover:bg-neutral-200 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
-                        <div className=' mb-7 ml-7 font-extralight text-sm flex flex-row border rounded-xl mr-auto items-center p-1 '><FaInfoCircle className=' text-2xl mx-4' /><p>hover over nodes for more information</p></div>
+                        <div className=' mb-7 ml-7 font-extralight text-sm flex flex-row border rounded-xl mr-auto items-center p-1 '><FaInfoCircle className=' text-2xl mx-2' /><p>hover over nodes for more information</p></div>
                         <div className='info w-full h-[20vh] mb-7 ml-7 border border-neutral-200 rounded-xl flex p-2 text-neutral-200'>
                             {nodeHover &&
                                 <div className=' flex flex-col w-full h-full'>
