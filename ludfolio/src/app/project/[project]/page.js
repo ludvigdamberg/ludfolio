@@ -87,7 +87,7 @@ function page({ params }) {
                         </div>
                     </div>
                     <div className='flex md:flex-row flex-col p-5 px-10 md:px-0 items-center border rounded-xl mx-auto mt-10 h-auto my-10'>
-                        <div className=' md:text-xl text-sm font-light mt-10 flex md:flex-row flex-col items-center '>Tech Stack: {project.tech.map((t) => <p className=' my-auto font-poppins font-light text-sm border rounded-2xl mt-2 md:mt-0 px-1 md:px-4 py-1 text-orange-500 mx-1'>{t} </p>)}</div>
+                        <div className=' md:text-xl text-sm font-light mt-10 flex md:flex-row flex-col items-center '>Tech Stack: {project.tech.map((t,index) => <p key={index} className=' my-auto font-poppins font-light text-sm border rounded-2xl mt-2 md:mt-0 px-1 md:px-4 py-1 text-orange-500 mx-1'>{t} </p>)}</div>
                         <p className=' md:text-xl text-center text-neutral-300 font-light tracking-wide mt-10'></p>
                         <Link href={project.url} className=' text-sm font-light mt-auto flex items-center justify-center mx-2 rounded-2xl border px-3 py-1 mb-3 md:mb-0'>Website  <MdOutlineArrowOutward /> </Link>
                     </div>

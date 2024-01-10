@@ -10,17 +10,12 @@ import { FaMagnifyingGlass } from 'react-icons/fa6'
 function page() {
 
   useEffect(() => {
-
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
       const locomotiveScroll = new LocomotiveScroll({
         triggerRootMargin: '-1px -1px -1px -1px'
       })
-
-
     })()
-
-
   }, [])
 
   return (
