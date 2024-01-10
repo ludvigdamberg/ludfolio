@@ -1,5 +1,5 @@
 import './globals.css'
-import { Courier_Prime,  Poppins, Rubik } from 'next/font/google'
+import { Poppins, Rubik } from 'next/font/google'
 
 
 const poppins = Poppins({
@@ -13,12 +13,6 @@ const rubik = Rubik({
   variable:'--font-rubik',
 })
 
-const courier = Courier_Prime({
-  subsets: ['latin'],
-  variable:'--font-courier',
-  weight: ["400","700"]
-})
-
 
 
 export const metadata = {
@@ -29,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${poppins.variable} ${courier.variable}  ${rubik.variable} font-rubik scrollbar-hide`}>{children}</body>
+      <body className={`${poppins.variable}  ${rubik.variable} font-rubik scrollbar-hide`}>{children}</body>
     </html>
   )
 }

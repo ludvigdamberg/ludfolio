@@ -1,7 +1,7 @@
 "use client"
-import React, { useEffect, useLayoutEffect, useRef } from 'react'
+import React, { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import { FaHeart, FaHourglass } from 'react-icons/fa'
+import { FaHourglass } from 'react-icons/fa'
 
 function Loader() {
   const loader = useRef()

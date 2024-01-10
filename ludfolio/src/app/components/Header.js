@@ -1,16 +1,15 @@
 "use client"
 import gsap from 'gsap';
 import Link from 'next/link'
-import { useRouter } from 'next/navigation';
 import React, { useEffect, useState } from 'react'
-import { FaBars, FaDownload, FaEnvelope, FaFilePdf } from 'react-icons/fa';
+import { FaBars, FaDownload, FaEnvelope } from 'react-icons/fa';
 import { FaGithub, FaLinkedin, FaCode, FaHouse } from "react-icons/fa6";
 import { MdOutlineArrowOutward } from 'react-icons/md';
 
 
 function Header() {
+
   const [home, setHome] = useState(false)
-  const router = useRouter()
 
   useEffect(() => {
 

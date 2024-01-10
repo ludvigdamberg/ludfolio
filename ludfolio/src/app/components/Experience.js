@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useLayoutEffect, useState } from 'react';
+import React, { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
@@ -7,9 +7,8 @@ import modules from '../../../public/assets/content'
 import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Experience() {
-  const effect1 = useRef(null);
+
   const effect2 = useRef(null);
-  const effect3 = useRef(null);
 
   const names = ['WEKNOWIT', 'CPAC SYSTEMS', 'LITHEHACK'];
   const images = ['wkit.svg', 'cpac.svg', 'lithehack.svg'];

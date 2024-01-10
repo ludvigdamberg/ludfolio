@@ -3,7 +3,6 @@ import React, { useEffect } from 'react'
 import gsap from 'gsap'
 import { GoArrowDown } from "react-icons/go";
 import Link from 'next/link';
-import { MdOutlineArrowOutward } from "react-icons/md";
 import { FaEnvelope, FaFilePdf } from 'react-icons/fa';
 import Image from 'next/image';
 import { FaLocationPin } from 'react-icons/fa6';

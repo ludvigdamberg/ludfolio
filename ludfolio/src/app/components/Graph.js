@@ -1,7 +1,7 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import { FaDownload, FaExternalLinkAlt, FaFilter, FaInfoCircle, FaLink, FaSearch } from "react-icons/fa"
+import { FaDownload, FaExternalLinkAlt, FaFilter, FaInfoCircle, FaSearch } from "react-icons/fa"
 import gsap from 'gsap'
 import Link from 'next/link'
 import Image from 'next/image'

@@ -8,13 +8,13 @@ import Image from 'next/image'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import gsap from 'gsap'
 import Link from 'next/link'
-import { MdOutlineArrowBack, MdOutlineArrowOutward, MdOutlineArrowRight, MdOutlineArrowRightAlt } from 'react-icons/md'
+import { MdOutlineArrowOutward } from 'react-icons/md'
 
 function page({ params }) {
+
     const [project, setProject] = useState(0);
     const [loaded, setLoaded] = useState(false);
     const [Index, setIndex] = useState(0);
-    const slug = params.project
 
     useEffect(() => {
 

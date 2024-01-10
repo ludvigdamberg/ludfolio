@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Header from './components/Header'
 import Landing from './components/Landing'
 import Experience from './components/Experience'
