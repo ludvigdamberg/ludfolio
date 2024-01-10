@@ -31,6 +31,17 @@ const project = {
             ]
         },
         {
+            name: 'description',
+            title: 'Description',
+            type: 'text'
+        },
+        {
+            name: 'tech',
+            title: 'Tech',
+            type: 'array',
+            of: [{type: 'string'}]
+        },
+        {
             name: 'images',
             title: 'Images',
             type: 'array',

@@ -52,7 +52,7 @@ function Contact() {
   return (
     <div className=' w-full h-[93vh] flex justify-center items-center bg-neutral-950'>
       {mail &&
-        <div className=' w-full h-full flex flex-col z-50 lg:p-20 text-neutral-200 items-center text-center'>
+        <div className=' w-full h-full flex flex-col z-30 lg:p-20 text-neutral-200 items-center text-center'>
           <h2 className=' form text-3xl lg:text-5xl mt-5 font-black w-[50%] text-indigo-500 tracking-wider'>SEND A MESSAGE!</h2>
           <h3 className=' form text-base lg:text-xl mt-5 font-regular w-[70%] text-neutral-500 tracking-wider'>Dont hesitate to reach out with questions or bussiness opportunities </h3>
           <form ref={form} onSubmit={sendEmail} className=' w-full flex flex-col h-full'>
@@ -75,7 +75,7 @@ function Contact() {
         </div>
       }
 
-      <div className=' mail w-full h-full  fixed mx-auto z-20 rounded-xl flex flex-col justify-center text-neutral-200'>
+      <div className=' mail w-full h-[93vh] overflow-hidden fixed  mx-auto z-20 rounded-xl flex flex-col justify-center text-neutral-200'>
         <div className=' mx-auto w-full text-center tracking-wide text-2xl leading-loose mt-auto font-semibold'>
         Connect with me on LinkedIn
         </div>

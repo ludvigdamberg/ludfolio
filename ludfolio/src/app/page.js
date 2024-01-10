@@ -10,7 +10,6 @@ import Loader from './components/Loader'
 function page() {
 
 
-  const [isLoading, setIsLoading] = useState(true)
   const [Loaded, setLoaded] = useState(false)
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
@@ -25,15 +24,9 @@ function page() {
 
 
     })()
-
     setLoaded(true)
-    setTimeout(() => {
-      setIsLoading(false)
-      document.body.style.cursor = "default"
-    }, 700)
 
   }, [])
-
 
 
   const parallax = useSpring({
@@ -55,8 +48,9 @@ function page() {
 
 
   return (
-    <div onMouseMove={handleMouseMove} className=' bg-neutral-950'>
-      {isLoading && <Loader />}
+    <>
+      <Loader />
+      <div onMouseMove={handleMouseMove} className=' bg-neutral-950'>
         <animated.div className=' rounded-full bg-indigo-600  w-[700px] h-[700px] hidden lg:block blur-lg opacity-50' style={{
           position: 'fixed ',
           top: parallax.top1,
@@ -75,13 +69,14 @@ function page() {
           left: parallax.left3,
         }}></animated.div>
 
-     
+
         <Header />
-        <Landing /> 
-        <Graph/>
-        <Experience/>
+        <Landing />
+        <Graph />
+        <Experience />
         <Footer />
-    </div>
+      </div>
+    </>
   )
 }
 

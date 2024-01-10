@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
-import { FaInstagram, FaGithub, FaLinkedin, FaArtstation } from 'react-icons/fa'
+import { FaInstagram, FaGithub, FaLinkedin, FaArtstation, FaDownload } from 'react-icons/fa'
 import { MdOutlineArrowOutward } from 'react-icons/md';
 import { SiNextdotjs, SiSanity, SiTailwindcss } from "react-icons/si";
 
@@ -23,6 +23,8 @@ function Footer() {
             <Link className=' lg:mx-5 group font-rubik font-regular tracking-wider mt-1 lg:mt-5 text-neutral-500 flex items-center hover:text-neutral-300 ease-in-out duration-150' href="/">Home <MdOutlineArrowOutward className='group-hover:rotate-45 group-hover:text-neutral-300 ease-in-out duration-100 mx-2' /></Link>
             <Link className=' lg:mx-5 group font-rubik font-regular tracking-wider mt-1 lg:mt-5 text-neutral-500 flex items-center hover:text-neutral-300 ease-in-out duration-150' href="/Contact">Contact<MdOutlineArrowOutward className='group-hover:rotate-45 group-hover:text-neutral-300 ease-in-out duration-100 mx-2' /></Link>
             <Link className=' lg:mx-5 group font-rubik font-regular tracking-wider mt-1 lg:mt-5 text-neutral-500 flex items-center hover:text-neutral-300 ease-in-out duration-150' href="/Projects">Projects<MdOutlineArrowOutward className='group-hover:rotate-45 group-hover:text-neutral-300 ease-in-out duration-100 mx-2' /></Link>
+            <a className=' lg:mx-5 group font-rubik font-regular tracking-wider mt-1 lg:mt-5 text-neutral-500 flex items-center hover:text-neutral-300 ease-in-out duration-150' href="/assets/CV_eng.pdf" download="your-portfolio.pdf" >My Resume<FaDownload className='group-hover:rotate-45 group-hover:text-neutral-300 ease-in-out duration-100 mx-2' /></a>
+
           </div>
 
         </div>

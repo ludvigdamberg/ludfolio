@@ -17,6 +17,8 @@ export async function getProjects() {
             name,
             "slug": slug.current,
             "image": image.asset->url,
+            description,
+            tech,
             url,
             content,
         }`
@@ -40,6 +42,9 @@ export async function getProject(slug) {
             name,
             "slug": slug.current,
             "image": image.asset->url,
+            "images": images[].asset->url,
+            description,
+            tech,
             url,
             content
         }`,

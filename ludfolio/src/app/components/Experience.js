@@ -51,18 +51,18 @@ function Experience() {
   return (
 
     <>
-      {Loaded ? <div ref={effect2} className=' text-neutral-200 h-screen w-full p-20 xl:flex xl:flex-col hidden '>
+      {Loaded ? <div ref={effect2} className=' text-neutral-100 h-screen w-full p-20 xl:flex xl:flex-col hidden '>
 
 
         <div className=' grid grid-cols-4 grid-rows-1 gap-1 p-1 w-full h-[40%] '>
-          <div className='leading-tight h-full rounded-xl border-2 flex w-full items-center justify-center font-black bg-neutral-900 '>
-            <p className=' text-4xl 2xl:text-5xl font-black z-40 bg-gradient-to-r bg-clip-text font-poppins text-indigo-500  '>EXPERIENCE</p>
+          <div className='leading-tight h-full rounded-xl border-2 flex w-full items-center justify-center font-black '>
+            <p className=' text-4xl 2xl:text-5xl font-normal z-40 bg-gradient-to-r bg-clip-text  '>Experience</p>
           </div>
           {names.map((name, index) => (
             <div
               key={index}
               onMouseEnter={() => Change(index)}
-              className='group rounded-xl border-2 flex items-center h-full w-full text-3xl justify-center font-black hover:bg-neutral-900 ease-in-out duration-100 hover:text-violet-600'>
+              className='group rounded-xl border-2 flex items-center h-full w-full text-3xl justify-center font-black hover:bg-neutral-950 ease-in-out duration-100 hover:text-violet-500'>
               {name}<MdOutlineArrowOutward className='group-hover:rotate-45 ease-in-out duration-100 text-3xl ml-1' />
             </div>
           ))}
@@ -72,14 +72,16 @@ function Experience() {
             < Image className='' src={`../../assets/${images[index]}`} alt='SVG Image' width={300} height={300} />
           </div>
           <div className=' experience flex border-2 rounded-xl col-span-1 row-span-1 justify-center items-center'>
-            <p className=' font-light text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-400 hover:text-sky-500 ease-in-out duration-200'>{icon}</p>)}</p>
+            <p className=' font-light text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-orange-500 ease-in-out duration-200'>{icon}</p>)}</p>
           </div>
           <div className=' experience h-full flex flex-col row-span-2 col-span-1 border-2 rounded-xl p-10'>
-            <p className=' font-extrabold tracking-widest leading-relaxed text-4xl text-sky-600  '>{modules.headlines[index]} </p>
-            <p className=' font-normal tracking-wide leading-relaxed text-md '>{modules.bigtext[index]} </p>
+            <div className=' my-auto'>
+              <p className=' font-extrabold tracking-widest leading-relaxed text-4xl text-red-500  '>{modules.headlines[index]} </p>
+              <p className=' font-normal tracking-wide leading-relaxed text-md font-poppins '>{modules.bigtext[index]} </p>
+            </div>
           </div>
           <div className=' experience flex h-full w-full border-2 rounded-xl col-span-1 row-span-2 p-10 items-center'>
-           <p className=' font-normal tracking-wider leading-relaxed text-sm '>{modules.smalltext[index]}</p>
+            <p className=' font-light tracking-widest leading-relaxed text-sm text-neutral-100 font-poppins  '>{modules.smalltext[index]}</p>
           </div>
         </div>
 

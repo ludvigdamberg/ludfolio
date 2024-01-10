@@ -1,9 +1,12 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import { FaExternalLinkAlt, FaFilter, FaInfoCircle, FaLink, FaSearch } from "react-icons/fa"
+import { FaDownload, FaExternalLinkAlt, FaFilter, FaInfoCircle, FaLink, FaSearch } from "react-icons/fa"
 import gsap from 'gsap'
 import Link from 'next/link'
+import Image from 'next/image'
+import { PiGraphThin } from "react-icons/pi";
+
 
 export default function Home() {
     const svgRef = useRef(null);
@@ -57,12 +60,12 @@ export default function Home() {
 
         const node = svg.append('g')
             .attr('stroke', '#fff')
-            .attr('stroke-width', 1)
+            .attr('stroke-width', 0.3)
             .selectAll('circle')
             .data(nodes)
             .join('circle')
-            .attr('r', 5)
-            .attr('fill', (d, i) => color(i))
+            .attr('r', 4)
+            .attr('fill', '#fff')
             .on('mouseover', handleMouseOver)
 
 
@@ -178,12 +181,22 @@ export default function Home() {
 
 
     return (
-        <div className='w-full h-screen flex flex-col text-neutral-200 p-10'>
-            <div className=' h-[20vh] flex flex-row w-full border rounded-xl p-5'>
-                <p className=' my-5 font-bold text-5xl'>ABOUT ME</p>
+        <div className='w-full h-screen xl:flex xl:flex-col hidden flex-col text-neutral-200 p-20 items-center'>
+            <div className=' h-[15vh] flex flex-row border  items-center w-full mr-auto rounded-xl z-40'>
+                <p className=' font-light mx-5 text-6xl font-rubik flex'> About Me <PiGraphThin className=' my-auto mx-2 text-6xl'/></p>
             </div>
-            <div className=' w-full h-full z-40 p-10 px-20'>
-                <div className='w-full h-full flex border-2 z-40 rounded-xl bg-slate-800'>
+            <div className=' w-full h-full z-40 flex items-end justify-end pt-10'>
+                <div className=' font-poppins flex flex-col h-full w-[25%]'>
+                    <div className=' w-[200px] h-[200px] relative rounded-full mx-auto mt-5 overflow-hidden'>
+                        <Image src={"/assets/pb.jpeg"} fill={true} objectFit='cover'/>
+                    </div>
+                    <p className=' mt-8 text-center text-3xl font-black mx-10 text-orange-500'>What's this?</p>
+                    <p className=' mt-8 text-center text-base font-light tracking-widest mx-10'>Here's a graph about me, take a look or search for a particular subject if you want to know something specific about me!</p>
+                    <p className=' mt-8 text-center text-base font-semibold tracking-wide mx-10 text-blue-500'>OR... Skip this goof and check out my CV</p>
+                    <a className=' mx-auto border rounded-xl py-2 px-2 group font-regular tracking-wider mt-8 text-neutral-200 flex items-center hover:bg-neutral-200 hover:text-neutral-950 ease-in-out duration-150' href="/assets/CV_eng.pdf" download="your-portfolio.pdf" >Download Resume<FaDownload className=' mx-2' /></a>
+
+                </div>
+                <div className='w-[75%] ml-auto h-full flex border z-40 rounded-xl bg-slate-800'>
                     <div className="  w-[22%] h-full flex flex-col z-40">
                         <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
                             <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />

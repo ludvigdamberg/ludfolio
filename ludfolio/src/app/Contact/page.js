@@ -4,7 +4,7 @@ import Header from '../components/Header'
 import Loader from '../components/Loader'
 function page() {
   return (
-    <div>
+    <div className=' flex flex-col'>
       <Loader/>
       <Header />
       <Contact />
