@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect, useState } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 import Header from './components/Header'
 import Landing from './components/Landing'
 import Experience from './components/Experience'
@@ -14,7 +14,7 @@ function page() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
 
-  useEffect(() => {
+  useLayoutEffect(() => {
 
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default

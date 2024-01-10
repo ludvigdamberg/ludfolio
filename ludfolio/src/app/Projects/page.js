@@ -1,5 +1,5 @@
 "use client"
-import React, { useEffect } from 'react'
+import React, { useLayoutEffect } from 'react'
 import Projects from '../components/Projects'
 import Header from '../components/Header'
 import Loader from '../components/Loader'
@@ -9,7 +9,7 @@ import { FaMagnifyingGlass } from 'react-icons/fa6'
 
 function page() {
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     (async () => {
       const LocomotiveScroll = (await import('locomotive-scroll')).default
       const locomotiveScroll = new LocomotiveScroll({
