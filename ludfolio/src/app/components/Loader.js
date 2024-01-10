@@ -13,7 +13,7 @@ function Loader() {
 
     tl2.to(".heart", { delay:0.5, duration:0.5, y:300 ,ease: "back.in"  })
     tl.fromTo(".load",{y:120}, {delay:0.5, duration: 0.5, y: 0, ease: "back.out", opacity: 1, stagger: 0.1 })
-    tl.to(loader.current,{ height: 0, duration: 0.4,ease: "power1.in"})
+    tl.to(loader.current,{ height: 0, duration: 0.5,ease: "power3.in"})
    
   }, [])
 
