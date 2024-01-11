@@ -2,9 +2,8 @@
 import gsap from 'gsap';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
-import { FaBars, FaDownload, FaEnvelope } from 'react-icons/fa';
+import { FaBars } from 'react-icons/fa';
 import { FaGithub, FaLinkedin, FaCode, FaHouse } from "react-icons/fa6";
-import { MdOutlineArrowOutward } from 'react-icons/md';
 
 
 function Header() {

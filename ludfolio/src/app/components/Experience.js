@@ -1,10 +1,8 @@
 "use client"
 import React, { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import modules from '../../../public/assets/content'
-import { MdOutlineArrowOutward } from "react-icons/md";
 
 function Experience() {
 
