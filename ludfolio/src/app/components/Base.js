@@ -1,13 +1,13 @@
 "use client"
 import React, { useState } from 'react'
-import Landing2 from './Landing2'
+import Landing from './Landing'
 import Experience from './Experience'
 import Graph from './Graph'
 import gsap from 'gsap'
 import { MdArrowRightAlt } from 'react-icons/md'
 function Base() {
 
-    const cards = [<Landing2 key={1} />, <Graph key={2}/>, <Experience key={3}/>]
+    const cards = [<Landing key={1} />, <Graph key={2}/>, <Experience key={3}/>]
     const [Index, setIndex] = useState(0)
 
     const NextCard = () => {

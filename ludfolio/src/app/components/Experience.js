@@ -10,7 +10,7 @@ function Experience() {
 
   const effect2 = useRef(null);
 
-  const names = ['WEKNOWIT', 'CPAC SYSTEMS', 'LITHEHACK'];
+  const names = ['weknowit', 'cpac systems', 'lithehack'];
   const images = ['wkit.svg', 'cpac.svg', 'lithehack.svg'];
   const [index, setIndex] = useState(0);
   const [Loaded, setLoaded] = useState(false)
@@ -18,7 +18,7 @@ function Experience() {
 
   useLayoutEffect(() => {
     setLoaded(true)
-    
+
 
   }, []);
 
@@ -36,38 +36,30 @@ function Experience() {
   return (
 
     <>
-      {Loaded ? <div ref={effect2} className=' text-neutral-100 h-full w-full xl:flex xl:flex-col hidden rounded-2xl font-light p-3 bg-neutral-900 '>
+      {Loaded ? <div ref={effect2} className=' text-neutral-100 text-sm h-full w-full xl:flex xl:flex-col hidden rounded-2xl font-light p-3 bg-neutral-900 '>
 
 
-        <div className=' grid grid-cols-4 grid-rows-1 gap-1 p-1 w-full h-[40%] '>
-          <div className='leading-tight h-full border rounded-2xl flex w-full items-center justify-center  '>
-            <p className=' text-4xl 2xl:text-5xl  z-40 bg-gradient-to-r bg-clip-text  '>Experience</p>
-          </div>
+        <div className='flex w-full h-[5%] '>
+          <p className=' ml-auto mx-3 my-auto'>Experience:</p>
           {names.map((name, index) => (
-            <div
-              key={index}
-              onMouseEnter={() => Change(index)}
-              className='group rounded-2xl border flex items-center h-full w-full text-3xl justify-center  hover:bg-neutral-100 ease-in-out duration-100 hover:text-neutral-900'>
-              {name}<MdOutlineArrowOutward className='group-hover:rotate-45 ease-in-out duration-100 text-3xl ml-1' />
+            <div key={index} onMouseEnter={() => Change(index)} className='group mx-2 rounded-sm flex px-1 justify-center my-auto hover:bg-yellow-500 ease-in-out duration-100'>
+              <button>{name}</button>
             </div>
           ))}
         </div>
-        <div className=' grid grid-rows-2 grid-cols-3 h-full w-full grid-flow-col gap-1 p-1'>
-          <div className=' experience  flex border rounded-2xl col-span-1 row-span-1 items-center justify-center'>
+        <div className=' grid grid-rows-2 grid-cols-3 h-full w-full grid-flow-col p-1 gap-1'>
+          <div className=' experience  flex border-b col-span-1 row-span-1 items-center justify-center'>
             < Image className='' src={`../../assets/${images[index]}`} alt='SVG Image' width={300} height={300} />
           </div>
-          <div className=' experience flex border rounded-2xl col-span-1 row-span-1 justify-center items-center'>
-            <p className='  text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-orange-600 ease-in-out duration-200'>{icon}</p>)}</p>
+          <div className=' experience flex col-span-1 row-span-1 justify-center items-center'>
+            <p className='  text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
           </div>
-          <div className=' experience h-full border flex flex-col row-span-2 col-span-1 rounded-2xl p-10'>
-            <div className=' my-auto'>
-              <p className='  tracking-widest leading-relaxed text-4xl  '>{modules.headlines[index]} </p>
-              <p className='  tracking-wide leading-relaxed text-md  '>{modules.bigtext[index]} </p>
-            </div>
+          <div className=' experience h-full flex border-l flex-col row-span-2 col-span-2  p-10'>
+            <p className='  tracking-widest leading-relaxed text-4xl underline  '>{modules.headlines[index]} </p>
+            <p className='  tracking-wide leading-relaxed text-xl mt-10  '>{modules.bigtext[index]} </p>
+            <p className='  tracking-widest leading-relaxed text-sm text-neutral-100 my-auto  '>{modules.smalltext[index]}</p>
           </div>
-          <div className=' experience flex h-full w-full border rounded-2xl col-span-1 row-span-2 p-10 items-center'>
-            <p className='  tracking-widest leading-relaxed text-sm text-neutral-100   '>{modules.smalltext[index]}</p>
-          </div>
+
         </div>
 
       </div > : <div className=' h-full w-full z-50'></div>}
