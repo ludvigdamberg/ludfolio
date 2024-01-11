@@ -20,7 +20,7 @@ export default function Home() {
             d3.json('plot.json').then(data => {
                 initializeGraph(width, height, data);
             })
-        }, 2000)
+        }, 1000)
 
 
     }, []);
