@@ -1,12 +1,9 @@
 "use client"
 import React, { useLayoutEffect, useState } from 'react'
 import Header from './components/Header'
-import Landing from './components/Landing'
-import Experience from './components/Experience'
-import Footer from './components/Footer'
-import Graph from './components/Graph'
-import { useSpring, animated } from 'react-spring';
+import { useSpring } from 'react-spring';
 import Loader from './components/Loader'
+import Base from './components/Base'
 function Page() {
 
 
@@ -48,35 +45,11 @@ function Page() {
 
 
   return (
-    <>
+    <div className=' h-screen w-full flex flex-col bg-neutral-950'>
       <Loader />
-      <div onMouseMove={handleMouseMove} className=' bg-neutral-950'>
-        <animated.div className=' rounded-full bg-indigo-600  w-[700px] h-[700px] hidden lg:block blur-lg opacity-50' style={{
-          position: 'fixed ',
-          top: parallax.top1,
-          left: parallax.left1,
-        }}></animated.div>
-
-        <animated.div className=' rounded-full bg-indigo-600 w-[500px] h-[500px] hidden lg:block blur-lg opacity-50 ' style={{
-          position: 'fixed ',
-          top: parallax.top2,
-          left: parallax.left2,
-        }}></animated.div>
-
-        <animated.div className=' rounded-full bg-indigo-600 w-[800px] h-[800px] hidden lg:block blur-lg opacity-50' style={{
-          position: 'fixed ',
-          top: parallax.top3,
-          left: parallax.left3,
-        }}></animated.div>
-
-
-        <Header />
-        <Landing />
-        <Graph />
-        <Experience />
-        <Footer />
-      </div>
-    </>
+      <Header />
+      <Base/>
+    </div>
   )
 }
 

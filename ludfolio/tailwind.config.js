@@ -8,9 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        poppins: ['var(--font-poppins)'],
-        mono: ['var(--font-courier)'],
-        rubik: ['var(--font-rubik)'],
+        inter: ['var(--font-inter)'],
       },
     },
   },

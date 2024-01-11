@@ -60,7 +60,7 @@ function Page({ params }) {
 
     return (<>
         {loaded &&
-            <div className=' w-full h-auto flex flex-col bg-neutral-950 text-neutral-300'>
+            <div className=' w-full h-auto flex flex-col bg-neutral-950 text-neutral-100 font-light'>
                 <Loader />
                 <Header />
                 <div className=' flex flex-col w-full h-auto p-5 md:p-20 mt-10 md:mt-0 bg-neutral-950'>
@@ -80,16 +80,16 @@ function Page({ params }) {
                         </button>
                     </div>
                     <div className='flex flex-col w-full h-full p-5'>
-                        <p className=' font-poppins text-2xl md:text-4xl mx-auto text-orange-600 font-black tracking-wide mt-10 uppercase'>{project.name}</p>
-                        <p className=' md:text-xl mx-auto text-neutral-300 font-light tracking-wide mt-10'>{project.description}</p>
-                        <div className=' mt-10 text-sm font-light tracking-wider leading-relaxed md:text-base lg:px-40 lg:mx-40 text-center'>
+                        <p className='  text-2xl md:text-4xl mx-auto tracking-wide mt-10'>{project.name}</p>
+                        <p className=' md:text-xl mx-auto text-neutral-300 tracking-wide mt-10'>{project.description}</p>
+                        <div className=' mt-10 text-sm tracking-wider leading-relaxed md:text-base lg:px-40 lg:mx-40 text-center'>
                             <PortableText value={project.content} />
                         </div>
                     </div>
                     <div className='flex md:flex-row flex-col p-5 px-10 md:px-2 items-center border rounded-xl mx-auto mt-10 h-auto my-10'>
-                        <div className=' md:text-xl text-sm font-light mt-10 flex md:flex-row flex-col items-center '>Tech Stack: {project.tech.map((t,index) => <p key={index} className=' my-auto font-poppins font-light text-sm border rounded-2xl mt-2 md:mt-0 px-1 md:px-4 py-1 text-orange-500 mx-1'>{t} </p>)}</div>
-                        <p className=' md:text-xl text-center text-neutral-300 font-light tracking-wide mt-10'></p>
-                        <Link href={project.url} className=' text-sm font-light mt-auto flex items-center justify-center mx-2 rounded-2xl border px-3 py-1 mb-3 md:mb-0'>Website  <MdOutlineArrowOutward /> </Link>
+                        <div className=' md:text-xl text-sm mt-10 flex md:flex-row flex-col items-center '>Tech Stack: {project.tech.map((t,index) => <p key={index} className=' my-auto text-sm border rounded-2xl mt-2 md:mt-0 px-1 md:px-4 py-1 text-yellow-500 mx-1'>{t} </p>)}</div>
+                        <p className=' md:text-xl text-center text-neutral-300 tracking-wide mt-10'></p>
+                        <Link href={project.url} className=' text-sm mt-auto flex items-center justify-center mx-2 rounded-2xl border px-3 py-1 mb-3 md:mb-0'>Website  <MdOutlineArrowOutward /> </Link>
                     </div>
 
                 </div>

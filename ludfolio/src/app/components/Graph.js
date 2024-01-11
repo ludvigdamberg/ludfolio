@@ -181,23 +181,11 @@ export default function Home() {
 
 
     return (
-        <div className='w-full h-screen xl:flex xl:flex-col hidden flex-col text-neutral-200 p-20 items-center'>
-            <div className=' h-[15vh] flex flex-row border  items-center w-full mr-auto rounded-xl z-40'>
-                <p className=' font-light mx-5 text-6xl font-rubik flex'> About Me <PiGraphThin className=' my-auto mx-2 text-6xl'/></p>
-            </div>
-            <div className=' w-full h-full z-40 flex items-end justify-end pt-10'>
-                <div className=' font-poppins flex flex-col h-full w-[25%]'>
-                    <div className=' w-[200px] h-[200px] relative rounded-full mx-auto mt-5 overflow-hidden'>
-                        <Image src={"/assets/pb.jpeg"} alt='Loading' fill={true} objectFit='cover'/>
-                    </div>
-                    <p className=' mt-8 text-center text-3xl font-black mx-10 text-orange-500'>What is this?</p>
-                    <p className=' mt-8 text-center text-base font-light tracking-widest mx-10'>Here is a graph about me, take a look or search for a particular subject if you want to know something specific about me</p>
-                    <p className=' mt-8 text-center text-base font-semibold tracking-wide mx-10 text-blue-500'>OR Skip this goof and check out my CV</p>
-                    <a className=' mx-auto border rounded-xl py-2 px-2 group font-regular tracking-wider mt-8 text-neutral-200 flex items-center hover:bg-neutral-200 hover:text-neutral-950 ease-in-out duration-150' href="/assets/CV_eng.pdf" download="your-portfolio.pdf" >Download Resume<FaDownload className=' mx-2' /></a>
-
-                </div>
-                <div className='w-[75%] ml-auto h-full flex border z-40 rounded-xl bg-slate-800'>
-                    <div className="  w-[22%] h-full flex flex-col z-40">
+        <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
+            <div className=' w-full h-full  flex items-end justify-end'>
+               
+                <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
+                    <div className="  w-[22%] h-full flex flex-col">
                         <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
                             <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />
                             <input
@@ -213,13 +201,13 @@ export default function Home() {
                         <button onClick={() => {
                             updateGraphWithSearchTerm("")
                             inputRef.current.value = ""
-                        }} className=' mb-4 ml-7 mt-auto mr-auto pr-8 font-light text-sm flex flex-row border rounded-xl py-3 items-center hover:text-slate-800 hover:bg-neutral-200 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
-                        <div className=' mb-7 ml-7 font-extralight text-sm flex flex-row border rounded-xl mr-auto items-center p-1 '><FaInfoCircle className=' text-2xl mx-2' /><p>hover over nodes for more information</p></div>
+                        }} className=' mb-4 ml-7 mt-auto mr-auto pr-8 text-sm flex flex-row border rounded-xl py-3 items-center hover:text-slate-800 hover:bg-neutral-200 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
+                        <div className=' mb-7 ml-7  text-sm flex flex-row border rounded-xl mr-auto items-center p-1 '><FaInfoCircle className=' text-2xl mx-2' /><p>hover over nodes for more information</p></div>
                         <div className='info w-full h-[20vh] mb-7 ml-7 border border-neutral-200 rounded-xl flex p-2 text-neutral-200'>
                             {nodeHover &&
                                 <div className=' flex flex-col w-full h-full'>
-                                    <p className=' font-light tracking-widest'> Node: {nodeHover.id}</p>
-                                    <p className=' font-light text-sm mt-3 text-neutral-400'>{nodeHover.label}</p>
+                                    <p className=' tracking-widest'> Node: {nodeHover.id}</p>
+                                    <p className=' text-sm mt-3 text-neutral-400'>{nodeHover.label}</p>
                                     <Link className='ml-auto mt-auto mb-1 mr-1 text-xl' href={nodeHover.link}><FaExternalLinkAlt className=' text-red-400 hover:opacity-50 ease-in-out duration-200' /></Link>
                                 </div>
                             }

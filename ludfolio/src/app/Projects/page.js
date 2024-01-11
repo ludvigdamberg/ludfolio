@@ -24,8 +24,8 @@ function Page() {
     <Header/>
     <Projects/>
     <div className=' h-[20vh] flex flex-col mx-auto my-10 px-10  items-center justify-center'>
-      <p className=' text-4xl text-neutral-200 flex font-poppins font-semibold'> <FaMagnifyingGlass className=' text-2xl mr-2 my-auto'/> Did you find what you were looking for?</p>
-      <p className=' text-xl text-neutral-200 flex font-rubik font-light mt-5'> I will update it soon with new projects</p>
+      <p className=' text-4xl text-neutral-200 flex font-semibold'> <FaMagnifyingGlass className=' text-2xl mr-2 my-auto'/> Did you find what you were looking for?</p>
+      <p className=' text-xl text-neutral-200 flex font-light mt-5'> I will update it soon with new projects</p>
 
     </div>
     <Footer/>    
