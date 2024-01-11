@@ -4,12 +4,12 @@ import { MdWork } from "react-icons/md"
 import gsap from 'gsap'
 import Image from 'next/image'
 import { PiFilePdf } from 'react-icons/pi'
-import { FaGraduationCap } from 'react-icons/fa'
+import {FaGraduationCap } from 'react-icons/fa'
 import Link from 'next/link'
 
 function Landing() {
 
-   
+
 
 
     useEffect(() => {
@@ -22,28 +22,29 @@ function Landing() {
     }, [])
 
     let time = new Date().toLocaleTimeString();
-	let [ctime, setCTime] = useState();
-	const updateTime = () => {
-		time = new Date().toLocaleTimeString();
-		setCTime(time);
-	}
-	setInterval(updateTime, 1000);
+    let [ctime, setCTime] = useState();
+    const updateTime = () => {
+        time = new Date().toLocaleTimeString();
+        setCTime(time);
+    }
+    setInterval(updateTime, 1000);
 
 
     return (
         <div className=' mx-auto h-full w-full  flex rounded-2xl p-3 bg-neutral-900 text-neutral-100 text-sm font-light'>
             <div className=' grid grid-cols-2 grid-rows-2 grid-flow-col w-full h-full'>
-                <div className=' flex flex-col  p-5'>
+                <div className=' flex p-5'>
                     {/* Grid container 1 */}
                     <div className=' w-[250px] h-[250px] my-auto rounded-full overflow-hidden relative'>
                         <Image src={"/assets/pb.jpeg"} fill={true} className=" object-cover" />
                     </div>
+                  
 
                 </div>
-                <div className=' flex flex-col text-base  p-5 justify-center'>
+                <div className=' flex flex-col text-base  p-5 justify-end'>
                     {/* Grid container 2 */}
                     <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
-                    <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  mr-2 my-auto' /> Final semester of masters in computer science</p>
+                    <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  mr-2 my-auto' /> Final semester of masters in data science</p>
                     <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
                     <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                 </div>

@@ -49,7 +49,7 @@ function Contact() {
   }, [mail])
 
   return (
-    <div className=' w-full h-[93vh] flex justify-center items-center bg-neutral-950'>
+    <div className=' w-full h-[90vh] flex justify-center items-center bg-neutral-950'>
       {mail &&
         <div className=' w-full h-full flex flex-col z-30 lg:p-20 text-neutral-200 items-center text-center'>
           <h2 className=' form text-3xl lg:text-5xl mt-5 font-black w-[50%] text-indigo-500 tracking-wider'>SEND A MESSAGE!</h2>

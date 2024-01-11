@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { getProject } from '../../../../sanity/sanity-utils'
 import { PortableText } from '@portabletext/react'
 import Loader from '@/app/components/Loader'
-import Header from '@/app/components/Header'
+import Header2 from '@/app/components/Header2'
 import Image from 'next/image'
 import { FaArrowLeft, FaArrowRight } from 'react-icons/fa'
 import gsap from 'gsap'
@@ -62,7 +62,7 @@ function Page({ params }) {
         {loaded &&
             <div className=' w-full h-auto flex flex-col bg-neutral-950 text-neutral-100 font-light'>
                 <Loader />
-                <Header />
+                <Header2 />
                 <div className=' flex flex-col w-full h-auto p-5 md:p-20 mt-10 md:mt-0 bg-neutral-950'>
                     <div className='flex mx-auto'>
                         <button onClick={() => handlePrev()} className=' py-2 px-2 rounded-full border-2 my-auto mx-2 md:mx-10 hover:scale-105 ease-in-out duration-200'>

@@ -176,7 +176,7 @@ export default function Home() {
 
 
     return (
-        <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
+        <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
             <div className=' w-full h-full  flex items-end justify-end'>
 
                 <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
@@ -188,7 +188,7 @@ export default function Home() {
                                 onChange={(e) => {
                                     updateGraphWithSearchTerm(e.target.value);
                                 }}
-                                className=" bg-transparent outline-none  w-full px-5  text-neutral-200 opacity-0 group-hover:opacity-100 ease-in-out duration-200"
+                                className=" bg-transparent outline-none  w-full px-5   opacity-0 group-hover:opacity-100 ease-in-out duration-200"
                                 type="text"
                                 placeholder="Anything particular?"
                             />
@@ -196,14 +196,13 @@ export default function Home() {
                         <button onClick={() => {
                             updateGraphWithSearchTerm("")
                             inputRef.current.value = ""
-                        }} className=' mb-4 ml-7 mt-auto mr-auto pr-8 text-sm flex flex-row border rounded-xl py-3 items-center hover:text-slate-800 hover:bg-neutral-200 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
-                        <div className=' mb-7 ml-7  text-sm flex flex-row border rounded-xl mr-auto items-center p-1 '><FaInfoCircle className=' text-2xl mx-2' /><p>hover over nodes for more information</p></div>
-                        <div className='info w-full h-[20vh] mb-7 ml-7 border border-neutral-200 rounded-xl flex p-2 text-neutral-200'>
+                        }} className=' mb-4 ml-7 mt-auto mr-auto pr-8  flex flex-row border py-3 items-center rounded-2xl hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
+                        <div className='info w-full h-[20vh] mb-7 ml-7  border-neutral-20 flex p-2 '>
                             {nodeHover &&
                                 <div className=' flex flex-col w-full h-full'>
                                     <p className=' tracking-widest'> Node: {nodeHover.id}</p>
-                                    <p className=' text-sm mt-3 text-neutral-400'>{nodeHover.label}</p>
-                                    <Link className='ml-auto mt-auto mb-1 mr-1 text-xl' href={nodeHover.link}><FaExternalLinkAlt className=' text-red-400 hover:opacity-50 ease-in-out duration-200' /></Link>
+                                    <p className='  mt-3 text-neutral-400'>{nodeHover.label}</p>
+                                    <Link className=' mt-3' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
                                 </div>
                             }
                         </div>
