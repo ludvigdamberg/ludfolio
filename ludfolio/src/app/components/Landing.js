@@ -16,7 +16,7 @@ function Landing() {
 
         const tl = gsap.timeline()
 
-        tl.fromTo(".logo", { y: 20 }, { duration: 0.5, y: 0, delay: 2, ease: "back.out", opacity: 1, stagger: 0.05 })
+        tl.fromTo(".logo", { y: 20 }, { duration: 0.5, y: 0, delay: 1.1, ease: "back.out", opacity: 1, stagger: 0.05 })
 
 
     }, [])
@@ -40,12 +40,12 @@ function Landing() {
                     </div>
 
                 </div>
-                <div className=' flex flex-col  p-5 justify-center'>
+                <div className=' flex flex-col text-base  p-5 justify-center'>
                     {/* Grid container 2 */}
-                    <p className='logo opacity-0 text-base underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
-                    <p className='logo opacity-0 text-4xl 2xl:text-xl my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  mr-2 my-auto' /> Final semester of masters in computer science</p>
-                    <div className='logo opacity-0 text-4xl 2xl:text-xl my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
-                    <div className='logo opacity-0 text-4xl 2xl:text-xl my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
+                    <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
+                    <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  mr-2 my-auto' /> Final semester of masters in computer science</p>
+                    <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
+                    <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                 </div>
                 <div className=' w-full h-full  p-5'>
                     {/* Grid container 3 */}
