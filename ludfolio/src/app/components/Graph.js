@@ -1,11 +1,9 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import { FaDownload, FaExternalLinkAlt, FaFilter, FaInfoCircle, FaSearch } from "react-icons/fa"
+import { FaExternalLinkAlt, FaFilter, FaInfoCircle, FaSearch } from "react-icons/fa"
 import gsap from 'gsap'
 import Link from 'next/link'
-import Image from 'next/image'
-import { PiGraphThin } from "react-icons/pi";
 
 
 export default function Home() {
@@ -15,18 +13,17 @@ export default function Home() {
     const inputRef = useRef("")
 
     useEffect(() => {
-        const svg = d3.select(svgRef.current);
-        const { width, height } = svg.node().getBoundingClientRect();
-        d3.json('plot.json').then(data => {
-            initializeGraph(width, height, data);
-        })
+       
+        setTimeout(() => {
+            const svg = d3.select(svgRef.current);
+            const { width, height } = svg.node().getBoundingClientRect();
+            d3.json('plot.json').then(data => {
+                initializeGraph(width, height, data);
+            })
+        }, 2000)
+
 
     }, []);
-
-    useEffect(() => {
-        console.log(nodeHover);
-    }, [nodeHover]); // This will run whenever nodeHover changes
-
 
 
     const initializeGraph = (width, height, data) => {
@@ -79,7 +76,6 @@ export default function Home() {
             // Check if there's data before accessing properties
             if (nodeData && typeof nodeData === "object") {
                 const { id, label } = nodeData;
-                console.log("Node Data:", { id, label });
                 setNodeHover(nodeData);
             }
 
@@ -173,7 +169,6 @@ export default function Home() {
 
             const { width, height } = svg.node().getBoundingClientRect();
 
-            console.log(newData)
             initializeGraph(width, height, newData);
 
         })
@@ -183,7 +178,7 @@ export default function Home() {
     return (
         <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
             <div className=' w-full h-full  flex items-end justify-end'>
-               
+
                 <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
                     <div className="  w-[22%] h-full flex flex-col">
                         <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">

@@ -15,9 +15,6 @@ function Header() {
 
     const isHomePage = window.location.pathname === '/';
 
-    console.log(window.location.pathname)
-    console.log(isHomePage)
-
     if (!isHomePage) { setHome(true) }
 
 

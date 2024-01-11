@@ -19,7 +19,6 @@ function Contact() {
         <div className=' w-40 h-40 absolute my-auto mx-auto z-50 bg-green-300'>{result.text}</div>
        
       }, (error) => {
-        console.log(error.text);
       });
   };
 
