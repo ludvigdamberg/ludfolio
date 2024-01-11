@@ -18,21 +18,7 @@ function Experience() {
 
   useLayoutEffect(() => {
     setLoaded(true)
-    gsap.registerPlugin(ScrollTrigger);
-
-
-    setTimeout(() => {
-      const timeline2 = gsap.timeline({
-        scrollTrigger: {
-          trigger: effect2.current,
-          start: 'top center',
-
-        },
-      });
-
-      timeline2.from(effect2.current, { y: 50, opacity: 0 }).to(effect2.current, { y: 0, opacity: 1 }, 0);
-
-    }, 2000)
+    
 
   }, []);
 
