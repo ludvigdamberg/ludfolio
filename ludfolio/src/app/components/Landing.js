@@ -8,6 +8,7 @@ import { FaGithub, FaGraduationCap } from 'react-icons/fa'
 import Link from 'next/link'
 import MagneticBig from './MagneticBig'
 import { FaCode, FaGithubAlt, FaInstagram, FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
+import Magnetic from './Magnetic'
 
 function Landing() {
 
@@ -58,11 +59,11 @@ function Landing() {
                             <div className='logo opacity-0 flex mx-2 mr-5 xl:mr-0  w-[10%]'><p className=' my-auto flex'>{ctime}</p></div>
                             <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
                         </div>
-                        <div className=' w-auto h-auto flex ml-auto mt-5'>
-                           <Link className='logo opacity-0 ml-auto flex mx-3' href={"https://github.com/ludvigdamberg"}><FaSquareGithub className=' hover:text-yellow-500'/></Link>
-                           <Link className='logo opacity-0 flex mx-3' href={"https://www.artstation.com/ludvigdamberg"}><FaLinkedin className=' hover:text-yellow-500'/></Link>
-                           <Link className='logo opacity-0 flex mx-3' href={"https://github.com/ludvigdamberg/ludfolio"}><FaCode className=' hover:text-yellow-500'/></Link>
-                           <Link className='logo opacity-0 flex mx-3' href={"https://www.instagram.com/ludvigdamberg/"}><FaInstagram className=' hover:text-yellow-500'/></Link>
+                        <div className=' w-auto h-auto text-base flex ml-auto mt-5'>
+                            <Link className='logo opacity-0 ml-auto flex mx-3' href={"https://github.com/ludvigdamberg"}><FaSquareGithub className=' hover:text-yellow-500' /></Link>
+                            <Link className='logo opacity-0 flex mx-3' href={"https://www.artstation.com/ludvigdamberg"}><FaLinkedin className=' hover:text-yellow-500' /></Link>
+                            <Link className='logo opacity-0 flex mx-3' href={"https://github.com/ludvigdamberg/ludfolio"}><FaCode className=' hover:text-yellow-500' /></Link>
+                            <Link className='logo opacity-0 flex mx-3' href={"https://www.instagram.com/ludvigdamberg/"}><FaInstagram className=' hover:text-yellow-500' /></Link>
                         </div>
                     </div>
                     <div className=' flex flex-col  p-5'>

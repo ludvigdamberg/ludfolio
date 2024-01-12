@@ -4,8 +4,7 @@ import Landing from './Landing'
 import Experience from './Experience'
 import Graph from './Graph'
 import gsap from 'gsap'
-import { MdArrowRightAlt } from 'react-icons/md'
-import { LuMoveLeft } from "react-icons/lu";
+import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
 
 function Base() {
 
@@ -64,15 +63,15 @@ function Base() {
 
     };
     return (
-        <div className=' flex flex-col h-[94vh] w-full p-5 overflow-hidden relative text-neutral-100'>
+        <div className=' flex flex-col h-[94vh] w-full p-5 overflow-hidden relative text-neutral-100  text-sm'>
             <div className='card w-[90%] mx-auto h-[90%] flex'>
                 {cards[Index]}
             </div>
           
                 <div className='flex flex-row mx-auto my-auto '>
-                <button onClick={() => PrevCard()} className=' py-[0.5px] px-2 border rounded-full flex'><LuMoveLeft className=' my-auto' /></button>
-                    <p className=' mx-5 font-light w-10 flex'>{Index + 1} / {cards.length}</p>
-                    <button onClick={() => NextCard()} className=' group py-[0.5px] px-3 border rounded-2xl flex overflow-hidden'><p className=' mx-1 my-auto'>next</p> <MdArrowRightAlt className=' group-hover:translate-x-1 duration-100 my-auto' /></button>
+                <button onClick={() => PrevCard()} className='group py-[0.5px] px-3 border rounded-full flex text-base'><LuMoveLeft className='group-hover:-translate-x-1 duration-100 my-auto my-auto' /></button>
+                    <p className=' mx-5 font-light w-10 flex items-center justify-center'>{Index + 1} / {cards.length}</p>
+                    <button onClick={() => NextCard()} className=' group py-[0.5px] px-3 border rounded-2xl flex text-base'><p className=' mx-1 my-auto'>next</p> <LuMoveRight className=' group-hover:translate-x-1 duration-100 my-auto' /></button>
                 </div>
                
 
