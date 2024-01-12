@@ -1,9 +1,10 @@
 "use client"
 import React, { useEffect, useRef, useState } from 'react'
 import * as d3 from 'd3'
-import { FaExternalLinkAlt, FaFilter, FaInfoCircle, FaSearch } from "react-icons/fa"
+import { FaExternalLinkAlt, FaFilter, FaSearch } from "react-icons/fa"
 import gsap from 'gsap'
 import Link from 'next/link'
+import MagneticBig from './MagneticBig'
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
     const inputRef = useRef("")
 
     useEffect(() => {
-       
+
         setTimeout(() => {
             const svg = d3.select(svgRef.current);
             const { width, height } = svg.node().getBoundingClientRect();
@@ -176,42 +177,44 @@ export default function Home() {
 
 
     return (
-        <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
-            <div className=' w-full h-full  flex items-end justify-end'>
+        <MagneticBig>
+            <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
+                <div className=' w-full h-full  flex items-end justify-end'>
 
-                <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
-                    <div className="  w-[22%] h-full flex flex-col">
-                        <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
-                            <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />
-                            <input
-                                ref={inputRef}
-                                onChange={(e) => {
-                                    updateGraphWithSearchTerm(e.target.value);
-                                }}
-                                className=" bg-transparent outline-none  w-full px-5   opacity-0 group-hover:opacity-100 ease-in-out duration-200"
-                                type="text"
-                                placeholder="Anything particular?"
-                            />
+                    <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
+                        <div className="  w-[22%] h-full flex flex-col">
+                            <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
+                                <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />
+                                <input
+                                    ref={inputRef}
+                                    onChange={(e) => {
+                                        updateGraphWithSearchTerm(e.target.value);
+                                    }}
+                                    className=" bg-transparent outline-none  w-full px-5   opacity-0 group-hover:opacity-100 ease-in-out duration-200"
+                                    type="text"
+                                    placeholder="Anything particular?"
+                                />
+                            </div>
+                            <button onClick={() => {
+                                updateGraphWithSearchTerm("")
+                                inputRef.current.value = ""
+                            }} className=' mb-4 ml-7 mt-auto mr-auto pr-8  flex flex-row border py-3 items-center rounded-2xl hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
+                            <div className='info w-full h-[20vh] mb-7 ml-7  border-neutral-20 flex p-2 '>
+                                {nodeHover &&
+                                    <div className=' flex flex-col w-full h-full'>
+                                        <p className=' tracking-widest'> Node: {nodeHover.id}</p>
+                                        <p className='  mt-3 text-neutral-400'>{nodeHover.label}</p>
+                                        <Link className=' mt-3' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
+                                    </div>
+                                }
+                            </div>
                         </div>
-                        <button onClick={() => {
-                            updateGraphWithSearchTerm("")
-                            inputRef.current.value = ""
-                        }} className=' mb-4 ml-7 mt-auto mr-auto pr-8  flex flex-row border py-3 items-center rounded-2xl hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
-                        <div className='info w-full h-[20vh] mb-7 ml-7  border-neutral-20 flex p-2 '>
-                            {nodeHover &&
-                                <div className=' flex flex-col w-full h-full'>
-                                    <p className=' tracking-widest'> Node: {nodeHover.id}</p>
-                                    <p className='  mt-3 text-neutral-400'>{nodeHover.label}</p>
-                                    <Link className=' mt-3' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
-                                </div>
-                            }
-                        </div>
+
+                        <svg ref={svgRef} width="100%" height="100%"></svg>
                     </div>
-
-                    <svg ref={svgRef} width="100%" height="100%"></svg>
                 </div>
             </div>
-        </div>
+        </MagneticBig>
     );
 }
 

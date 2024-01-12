@@ -18,11 +18,11 @@ function Loader() {
   }, [])
 
   return (
-    <div ref={loader} className=' h-screen w-screen bg-neutral-950 text-neutral-200 fixed top-0 left-0 z-50 text-5xl font-bold justify-center items-center flex overflow-hidden'>
+    <div ref={loader} className=' h-screen w-screen bg-neutral-950 text-neutral-200 fixed top-0 left-0 z-50 text-5xl  justify-center items-center flex overflow-hidden'>
       <div className='flex h-auto'>
-        <div className=' flex flex-col font-black md:text-9xl text-5xl border rounded-l-xl md:h-[250px] md:w-[250px] overflow-hidden'>
-          <p className='load opacity-0 h-auto overflow-hidden'>LUD</p>
-          <p className='load tracking-wider opacity-0 h-auto overflow-hidden'>VIG</p>
+        <div className=' flex flex-col md:text-9xl text-5xl border rounded-l-xl md:h-[250px] md:w-[250px] overflow-hidden'>
+          <p className='load opacity-0 h-auto tracking-tight overflow-hidden'>LUD</p>
+          <p className='load tracking-widest opacity-0 h-auto overflow-hidden'>VIG</p>
         </div>
         <div className='  border rounded-r-xl border-neutral-50 md:w-[250px] text-5xl md:text-9xl md:h-[250px] overflow-hidden flex  '><FaHourglass className='heart my-auto md:mx-auto mx-6'/> </div>
       </div>
