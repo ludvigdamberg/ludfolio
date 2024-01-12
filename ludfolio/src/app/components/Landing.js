@@ -4,9 +4,10 @@ import { MdWork } from "react-icons/md"
 import gsap from 'gsap'
 import Image from 'next/image'
 import { PiFilePdf } from 'react-icons/pi'
-import { FaGraduationCap } from 'react-icons/fa'
+import { FaGithub, FaGraduationCap } from 'react-icons/fa'
 import Link from 'next/link'
 import MagneticBig from './MagneticBig'
+import { FaCode, FaGithubAlt, FaInstagram, FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
 
 function Landing() {
 
@@ -32,7 +33,7 @@ function Landing() {
 
     return (
         <MagneticBig>
-            <div className=' mx-auto h-full w-full  flex rounded-2xl p-3 bg-neutral-900 text-neutral-100 text-sm font-light'>
+            <div className='hidden mx-auto h-full w-full  lg:flex rounded-2xl p-3 bg-neutral-900 text-neutral-100 text-sm font-light'>
                 <div className=' grid grid-cols-2 grid-rows-2 grid-flow-col w-full h-full'>
                     <div className=' flex flex-col p-5'>
                         {/* Grid container 1 */}
@@ -46,18 +47,23 @@ function Landing() {
                     <div className=' flex flex-col text-base  p-5 justify-end'>
                         {/* Grid container 2 */}
                         <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
-                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className=' text-orange-500  mr-2 my-auto' /> Final semester of masters in data science</p>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-orange-500  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-orange-500  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
+                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className=' text-yellow-500  mr-2 my-auto' /> Final semester of masters in data science</p>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                     </div>
                     <div className=' w-full h-full  p-5'>
                         {/* Grid container 3 */}
-                        <div className=' w-auto h-auto flex ml-auto'>
+                        <div className=' w-auto h-auto flex '>
                             <div className='logo opacity-0 ml-auto flex mx-2'><p className=' my-auto flex'>Norrköping, Sweden</p></div>
-                            <div className='logo opacity-0 flex mx-2 w-[10%]'><p className=' my-auto flex'>{ctime}</p></div>
+                            <div className='logo opacity-0 flex mx-2 mr-5 xl:mr-0  w-[10%]'><p className=' my-auto flex'>{ctime}</p></div>
                             <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
                         </div>
-
+                        <div className=' w-auto h-auto flex ml-auto mt-5'>
+                           <Link className='logo opacity-0 ml-auto flex mx-3' href={"https://github.com/ludvigdamberg"}><FaSquareGithub className=' hover:text-yellow-500'/></Link>
+                           <Link className='logo opacity-0 flex mx-3' href={"https://www.artstation.com/ludvigdamberg"}><FaLinkedin className=' hover:text-yellow-500'/></Link>
+                           <Link className='logo opacity-0 flex mx-3' href={"https://github.com/ludvigdamberg/ludfolio"}><FaCode className=' hover:text-yellow-500'/></Link>
+                           <Link className='logo opacity-0 flex mx-3' href={"https://www.instagram.com/ludvigdamberg/"}><FaInstagram className=' hover:text-yellow-500'/></Link>
+                        </div>
                     </div>
                     <div className=' flex flex-col  p-5'>
                         {/* Grid container 4 */}

@@ -71,7 +71,7 @@ function Base() {
           
                 <div className='flex flex-row mx-auto my-auto '>
                 <button onClick={() => PrevCard()} className=' py-[0.5px] px-2 border rounded-full flex'><LuMoveLeft className=' my-auto' /></button>
-                    <p className=' mx-5 font-light'>{Index + 1} / {cards.length}</p>
+                    <p className=' mx-5 font-light w-10 flex'>{Index + 1} / {cards.length}</p>
                     <button onClick={() => NextCard()} className=' group py-[0.5px] px-3 border rounded-2xl flex overflow-hidden'><p className=' mx-1 my-auto'>next</p> <MdArrowRightAlt className=' group-hover:translate-x-1 duration-100 my-auto' /></button>
                 </div>
                

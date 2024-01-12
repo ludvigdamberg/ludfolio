@@ -198,13 +198,13 @@ export default function Home() {
                             <button onClick={() => {
                                 updateGraphWithSearchTerm("")
                                 inputRef.current.value = ""
-                            }} className=' mb-4 ml-7 mt-auto mr-auto pr-8  flex flex-row border py-3 items-center rounded-2xl hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mx-4' /><p className=' mx-auto'>Restore filter</p></button>
-                            <div className='info w-full h-[20vh] mb-7 ml-7  border-neutral-20 flex p-2 '>
+                            }} className='  ml-7 mt-auto mr-auto px-2  flex flex-row border py-1 items-center rounded-lg hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mr-2' /><p className=' mx-auto'>Restore filter</p></button>
+                            <div className='info w-full h-[20vh] ml-7  border-neutral-20 flex p-2 '>
                                 {nodeHover &&
-                                    <div className=' flex flex-col w-full h-full'>
-                                        <p className=' tracking-widest'> Node: {nodeHover.id}</p>
-                                        <p className='  mt-3 text-neutral-400'>{nodeHover.label}</p>
-                                        <Link className=' mt-3' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
+                                    <div className=' flex flex-col h-full w-full mt-auto'>
+                                        <p className=' my-auto tracking-widest'> Node: {nodeHover.id}</p>
+                                        <p className=' my-auto  text-neutral-400'>{nodeHover.label}</p>
+                                        <Link className=' my-auto ' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
                                     </div>
                                 }
                             </div>
