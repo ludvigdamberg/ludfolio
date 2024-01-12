@@ -49,7 +49,7 @@ function Experience() {
 
 
           <div className=' flex w-full h-[5%] '>
-            <p className='exp opacity-0 ml-auto mx-3 my-auto'>Experience:</p>
+            <p className=' ml-auto mx-3 my-auto'>Experience:</p>
             {names.map((name, index) => (
               <div key={index} onMouseEnter={() => Change(index)} className='group mx-2 rounded-sm flex px-1 justify-center my-auto hover:bg-yellow-500 ease-in-out duration-100'>
                 <button>{name}</button>
