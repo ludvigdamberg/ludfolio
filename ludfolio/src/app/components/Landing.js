@@ -39,7 +39,7 @@ function Landing() {
                     <div className=' flex flex-col p-5'>
                         {/* Grid container 1 */}
                         <div className=' w-[250px] h-[250px] my-auto rounded-full overflow-hidden relative'>
-                            <Image src={"/assets/pb.jpeg"} fill={true} className=" object-cover" />
+                            <Image src={"/assets/pb.jpeg"} alt='loading' fill={true} className=" object-cover" />
                         </div>
 
 

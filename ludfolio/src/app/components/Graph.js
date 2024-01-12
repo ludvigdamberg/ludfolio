@@ -178,7 +178,7 @@ export default function Home() {
 
     return (
         <MagneticBig>
-            <div className='w-full h-full xl:flex xl:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
+            <div className='w-full h-full lg:flex lg:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
                 <div className=' w-full h-full  flex items-end justify-end'>
 
                     <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>

@@ -1,9 +1,9 @@
+"use client"
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useState } from 'react'
 import { FaGraduationCap } from 'react-icons/fa'
 import { MdWork } from 'react-icons/md'
-import { PiFilePdf } from 'react-icons/pi'
 
 function Mobile() {
 
@@ -22,7 +22,7 @@ function Mobile() {
                     <div className=' h-[5%] w-full flex'> <p className=' text-xs'>software engineer / media technology / data science</p></div>
                     <div className=' grid grid-cols-2 h-full'>
                         <div className=' w-[150px] h-[150px] my-auto mx-auto rounded-full overflow-hidden relative'>
-                            <Image src={"/assets/pb.jpeg"} fill={true} className=" object-cover" />
+                            <Image src={"/assets/pb.jpeg"} alt='loading' fill={true} className=" object-cover" />
                         </div>
                         <div className=' w-full h-full flex flex-col ml-auto justify-center'>
                             <div className=' mt-1 '><p className=' '>Norrköping, Sweden</p></div>

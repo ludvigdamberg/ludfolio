@@ -1,30 +1,16 @@
 "use client"
 import gsap from 'gsap';
 import Link from 'next/link'
-import React, { useEffect, useState } from 'react'
-import { FaBars } from 'react-icons/fa';
-
+import React, {useState } from 'react'
 
 function Header() {
 
-    const [home, setHome] = useState(false)
     const [expanded, setExpanded] = useState(false)
-
-    useEffect(() => {
-
-        const isHomePage = window.location.pathname === '/';
-
-        if (!isHomePage) { setHome(true) }
-
-
-
-    }, [])
 
 
     const expandMenu = () => {
 
         const tl = gsap.timeline()
-        const tl2 = gsap.timeline()
         tl.to(".animat", { height: "40vh", duration: 0.2, display: "flex", ease: "power3.out" })
         tl.to(".menu", { y: 257, duration: 0.2, display: "flex", ease: "power3.out" })
         tl.to(".links", { opacity: 1, duration: 0.25 })
@@ -60,14 +46,15 @@ function Header() {
                     <p className='group links opacity-0 mt-16 border-t flex mx-10'>created by: Ludvig Damberg</p>
                 </div>
             </div>
-            <div className='justify-center text-neutral-300 w-full h-full hidden lg:flex'>
-                <div className=' w-auto mx-2 my-auto py-2  flex rounded-lg border border-neutral-400 px-10 '>
+            <div className=' text-neutral-300 w-full h-full hidden lg:flex border-neutral-400 lg:px-5'>
+                <div className=' w-auto mx-2 my-auto   flex rounded-md border px-3 '>
                     <p className=' '>Links</p>
                 </div>
-                <div className=' w-auto mx-2 my-auto py-2  flex  px-10  '>
-                    <Link className=' mx-10 my-auto hover:underline ease-in-out duration-100 ' href="/Projects">Projects </Link>
-                    <button onClick={() => handleContactClick()} className=' mx-10 my-auto hover:underline ease-in-out duration-100 ' href="/Contact">Contact </button>
-                    <Link className=' mx-10 my-auto hover:underline ease-in-out duration-100  ' href="/">Home </Link>
+                <div className=' w-auto mx-2 my-auto flex px-3 font-normal  '>
+                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 z-20 ' href="/Projects">Projects </Link>
+                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/">LinkedIn </Link>
+                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
+                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100  z-20 ' href="/">Home </Link>
                 </div>
             </div>
             <div className='text-neutral-300 flex-col flex w-full lg:hidden px-10 '>
