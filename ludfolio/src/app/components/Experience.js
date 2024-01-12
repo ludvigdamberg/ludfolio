@@ -1,5 +1,5 @@
 "use client"
-import React, { useRef, useLayoutEffect, useState } from 'react';
+import React, { useRef, useLayoutEffect, useState, useEffect } from 'react';
 import { gsap } from 'gsap';
 import Image from 'next/image';
 import modules from '../../../public/assets/content'
@@ -19,7 +19,16 @@ function Experience() {
     setLoaded(true)
 
 
-  }, []);
+  }, [])
+
+  useEffect(() => {
+
+    const tl2 = gsap.timeline()
+
+    tl2.fromTo(".exp", { y: 20}, { duration: 0.5, y: 0, delay: 1.1, ease: "back.out", opacity: 1, stagger: 0.05 })
+
+
+  },[Loaded])
 
 
   function Change(index) {
@@ -39,8 +48,8 @@ function Experience() {
         {Loaded ? <div ref={effect2} className=' text-neutral-100 text-sm h-full w-full lg:flex lg:flex-col hidden rounded-2xl font-light p-3 bg-neutral-900 '>
 
 
-          <div className='flex w-full h-[5%] '>
-            <p className=' ml-auto mx-3 my-auto'>Experience:</p>
+          <div className=' flex w-full h-[5%] '>
+            <p className='exp opacity-0 ml-auto mx-3 my-auto'>Experience:</p>
             {names.map((name, index) => (
               <div key={index} onMouseEnter={() => Change(index)} className='group mx-2 rounded-sm flex px-1 justify-center my-auto hover:bg-yellow-500 ease-in-out duration-100'>
                 <button>{name}</button>
@@ -54,12 +63,12 @@ function Experience() {
               </div>
             </div>
             <div className=' experience flex col-span-1 row-span-1 justify-center items-center'>
-              <p className='  text-2xl xl:text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
+              <p className='exp opacity-0  text-2xl xl:text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
             </div>
             <div className=' experience h-full flex border-l flex-col row-span-2 col-span-2  p-10'>
-              <p className='  tracking-widest leading-relaxed text-4xl underline  '>{modules.headlines[index]} </p>
-              <p className='  tracking-widest leading-relaxed text-base xl:text-xl mt-10  '>{modules.bigtext[index]} </p>
-              <p className='  xl:tracking-widest leading-loose text-sm my-auto  '>{modules.smalltext[index]}</p>
+              <p className='exp opacity-0  tracking-widest leading-relaxed text-4xl underline  '>{modules.headlines[index]} </p>
+              <p className='exp opacity-0  tracking-widest leading-relaxed text-base xl:text-xl mt-10  '>{modules.bigtext[index]} </p>
+              <p className='exp opacity-0  xl:tracking-widest leading-loose text-sm my-auto  '>{modules.smalltext[index]}</p>
             </div>
 
           </div>
