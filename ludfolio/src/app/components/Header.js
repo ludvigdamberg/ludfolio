@@ -1,11 +1,29 @@
 "use client"
 import gsap from 'gsap';
 import Link from 'next/link'
-import React, {useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 function Header() {
 
     const [expanded, setExpanded] = useState(false)
+    const [theme, setTheme] = useState(false)
+
+
+    const themeCheck = () => {
+
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark')
+            setTheme(true)
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    }
+
+    useEffect(() => {
+
+        themeCheck()
+    }, [])
+
 
 
     const expandMenu = () => {
@@ -32,37 +50,58 @@ function Header() {
 
     const handleContactClick = () => {
         window.location.href = 'mailto:ludvig.damberg@outlook.com';
-    };
+    }
+
+    const switchTheme = () => {
+
+
+        if (theme == false) {
+            document.documentElement.classList.add('dark')
+            localStorage.theme = 'dark'
+            setTheme(true)
+            gsap.to(".switch", {x:18, duration:0.1,ease:"power3.out"})
+            return
+        } else {
+            document.documentElement.classList.remove('dark')
+            localStorage.theme = 'light'
+            setTheme(false)
+            gsap.to(".switch", {x:0, duration:0.1,ease:"power3.out"})
+            return
+        }
+
+    }
 
 
     return (
 
-        <div className='  w-[90%] mx-auto h-[10vh] flex font-light text-sm'>
-            <div className='animat h-0 w-[90%] fixed z-40 bg-neutral-900 mx-auto overflow-hidden flex-col rounded-b-2xl '>
-                <div className=' h-full flex flex-col text-neutral-100'>
+        <div className='  w-[90%] mx-auto h-[10vh] flex text-sm font-light'>
+            <div className='animat h-0 w-[90%] fixed z-40 mx-auto overflow-hidden flex-col rounded-b-2xl text-neutral-950 dark:text-neutral-100 bg-white dark:bg-black '>
+                <div className=' h-full flex flex-col '>
                     <Link className='group links opacity-0 mt-16 border-t  flex mx-10' href={"/Projects"}><p className='  mx-2 '> Projects</p> </Link>
                     <button onClick={() => handleContactClick()} className='group links opacity-0 mt-16 border-t  flex mx-10'> <p className='  mx-2 '> Contact</p> </button>
                     <Link className='group links opacity-0 mt-16 border-t  flex mx-10' href={"/"}> <p className='  mx-2 '> Home</p></Link>
                     <p className='group links opacity-0 mt-16 border-t flex mx-10'>created by: Ludvig Damberg</p>
                 </div>
             </div>
-            <div className=' text-neutral-300 w-full h-full hidden lg:flex border-neutral-400 lg:px-5'>
-                <div className=' w-auto mx-2 my-auto   flex rounded-md border px-3 '>
+            <div className='  w-full h-full hidden lg:flex  lg:px-5 '>
+                <div className=' w-auto mx-2 my-auto  flex rounded-md border border-neutral-950 dark:border-neutral-100 px-3'>
                     <p className=' '>Links</p>
                 </div>
-                <div className=' w-auto mx-2 my-auto flex px-3 font-normal  '>
-                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 z-20 ' href="/Projects">Projects </Link>
-                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/">LinkedIn </Link>
-                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
-                    <Link className=' mx-3 px-1 rounded-sm my-auto hover:bg-yellow-500 ease-in-out duration-100  z-20 ' href="/">Home </Link>
+                <div className=' w-auto mx-2 my-auto flex px-3  '>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="/Projects">Projects </Link>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/">LinkedIn </Link>
+                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100  z-20 ' href="/">Home </Link>
                 </div>
+                <div className=' flex ml-auto'><button onClick={() => switchTheme()} className=' my-auto flex rounded-full border border-bg-950 dark:border-bg-100 border-neutral-950 dark:border-neutral-100 w-10 '><div className='switch h-5 w-5 rounded-full dark:bg-neutral-100 bg-neutral-900'></div></button></div>
             </div>
-            <div className='text-neutral-300 flex-col flex w-full lg:hidden px-10 '>
-            <button onClick={() => {
-                if(expanded){
-                CollapseMenu()
-                }else
-                expandMenu()}} className=' menu z-50 ml-auto my-auto lg:hidden border rounded-full px-2 py-[0.5px]' >{expanded ? <p>close menu </p> : <p>expand menu</p>}</button>
+            <div className=' flex-col flex w-full lg:hidden px-10 '>
+                <button onClick={() => {
+                    if (expanded) {
+                        CollapseMenu()
+                    } else
+                        expandMenu()
+                }} className=' menu z-50 ml-auto my-auto lg:hidden border rounded-full px-2 py-[0.5px]' >{expanded ? <p>close menu </p> : <p>expand menu</p>}</button>
 
             </div>
         </div>

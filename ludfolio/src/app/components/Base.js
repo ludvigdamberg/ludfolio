@@ -14,7 +14,7 @@ function Base() {
     const NextCard = () => {
         const tl = gsap.timeline();
         // Animate current card out
-        tl.to(".card", { scale: 0.7, duration: 0.3, ease: "power2.out" });
+        tl.to(".card", { scale: 0.75, duration: 0.3, ease: "power2.out" });
         tl.to(".card", {
             x: -2000, duration: 0.5, ease: "power2.in", onComplete: () => {
                 setTimeout(() => {
@@ -63,17 +63,28 @@ function Base() {
 
     };
     return (
-        <div className=' hidden lg:flex flex-col h-[90vh] w-full p-5 overflow-hidden relative text-neutral-100  text-sm'>
+        <div className=' hidden lg:flex flex-col h-[90vh] w-full p-5 overflow-hidden relative text-sm font-light'>
             <div className='card w-[90%] mx-auto h-[90%] flex'>
                 {cards[Index]}
             </div>
-          
-                <div className='lg:flex flex-row mx-auto my-auto hidden '>
-                <button onClick={() => PrevCard()} className='group py-[0.5px] px-3 border rounded-full flex text-base'><LuMoveLeft className='group-hover:-translate-x-1 duration-100 my-auto my-auto' /></button>
-                    <p className=' mx-5 font-light w-10 flex items-center justify-center'>{Index + 1} / {cards.length}</p>
-                    <button onClick={() => NextCard()} className=' group py-[0.5px] px-3 border rounded-2xl flex text-base'><p className=' mx-1 my-auto'>next</p> <LuMoveRight className=' group-hover:translate-x-1 duration-100 my-auto' /></button>
+
+            <div className='lg:grid lg:grid-cols-3 w-[90%] mx-auto my-auto hidden'>
+                <div className=' flex flex-row'>
+                    {/* container 1 */}
+                    <p className=' my-auto '>tech stack: nextjs, d3, sanity.io</p>
                 </div>
-               
+                <div className=' flex flex-row justify-center'>
+                    {/* container 2 */}
+                    <button onClick={() => PrevCard()} className='group py-[0.5px] px-3 border border-neutral-950 dark:border-neutral-200 rounded-full flex text-base'><LuMoveLeft className='group-hover:-translate-x-1 duration-100 my-auto' /></button>
+                    <p className=' mx-5 font-light w-10 flex items-center justify-center'>{Index + 1} / {cards.length}</p>
+                    <button onClick={() => NextCard()} className=' group py-[0.5px] px-3 border border-neutral-950 dark:border-neutral-200 rounded-2xl flex text-base'><p className=' mx-1 my-auto'>next</p> <LuMoveRight className=' group-hover:translate-x-1 duration-100 my-auto' /></button>
+                </div>
+                <div className=' flex flex-row '>
+                    {/* container 3 */}
+                    <p className=' my-auto ml-auto'>created by: Ludvig Damberg</p>
+                </div>
+            </div>
+
 
         </div>
     )

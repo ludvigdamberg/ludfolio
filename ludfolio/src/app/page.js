@@ -1,3 +1,4 @@
+
 import Loader from './components/Loader'
 import Base from './components/Base'
 import Header from './components/Header'
@@ -7,7 +8,7 @@ function Page() {
 
 
   return (
-    <div className=' h-auto w-full flex flex-col bg-neutral-950'>
+    <div className=' h-auto w-full flex flex-col bg-neutral-100 dark:bg-neutral-950 dark:text-neutral-100 text-neutral-950 '>
       <Loader />
       <Header />
       <Base />

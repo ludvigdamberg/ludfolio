@@ -4,11 +4,10 @@ import { MdWork } from "react-icons/md"
 import gsap from 'gsap'
 import Image from 'next/image'
 import { PiFilePdf } from 'react-icons/pi'
-import { FaGithub, FaGraduationCap } from 'react-icons/fa'
+import { FaGraduationCap } from 'react-icons/fa'
 import Link from 'next/link'
 import MagneticBig from './MagneticBig'
-import { FaCode, FaGithubAlt, FaInstagram, FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
-import Magnetic from './Magnetic'
+import { FaCode, FaInstagram, FaLinkedin, FaSquareGithub } from 'react-icons/fa6'
 
 function Landing() {
 
@@ -34,8 +33,8 @@ function Landing() {
 
     return (
         <MagneticBig>
-            <div className='hidden mx-auto h-full w-full  lg:flex rounded-2xl p-3 bg-neutral-900 text-neutral-100 text-sm font-light'>
-                <div className=' grid grid-cols-2 grid-rows-2 grid-flow-col w-full h-full'>
+            <div className='hidden mx-auto h-full w-full  lg:flex rounded-2xl p-3 shadow-2xl dark:shadow-none bg-slate-600 text-slate-100 dark:bg-neutral-900 dark:text-neutral-100 text-sm font-light'>
+                <div className=' grid grid-cols-2 grid-rows-2 grid-flow-col w-full h-full '>
                     <div className=' flex flex-col p-5'>
                         {/* Grid container 1 */}
                         <div className=' w-[250px] h-[250px] my-auto rounded-full overflow-hidden relative'>
@@ -48,14 +47,14 @@ function Landing() {
                     <div className=' flex flex-col text-base  p-5 justify-end'>
                         {/* Grid container 2 */}
                         <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
-                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className=' text-yellow-500  mr-2 my-auto' /> Final semester of masters in data science</p>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> Fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> Student helper <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
+                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className=' text-yellow-500  mr-2 my-auto' /> final semester of masters in data science</p>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className=' text-yellow-500  mr-2 my-auto' /> student help <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                     </div>
                     <div className=' w-full h-full  p-5'>
                         {/* Grid container 3 */}
                         <div className=' w-auto h-auto flex '>
-                            <div className='logo opacity-0 ml-auto flex '><p className=' my-auto flex'>Norrköping, Sweden</p></div>
+                            <div className='logo opacity-0 ml-auto flex '><p className=' my-auto flex'>norrköping, Sweden</p></div>
                             <div className='logo opacity-0 flex mx-2 xl:mr-0  w-[15%] justify-center'><p className=' my-auto flex'>{ctime}</p></div>
                             <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3  border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
                         </div>

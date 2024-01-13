@@ -178,12 +178,12 @@ export default function Home() {
 
     return (
         <MagneticBig>
-            <div className='w-full h-full lg:flex lg:flex-col hidden flex-col text-sm text-neutral-200 p-3 items-center bg-neutral-900 rounded-2xl font-light'>
-                <div className=' w-full h-full  flex items-end justify-end'>
+            <div className='w-full h-full lg:flex lg:flex-col hidden flex-col text-sm p-3 items-center shadow-2xl dark:shadow-none bg-slate-600 text-slate-100 dark:bg-neutral-900 dark:text-neutral-100 rounded-2xl font-light'>
+                <div className=' w-full h-full  flex items-end justify-end '>
 
-                    <div className='w-full ml-auto h-full flex  rounded-xl bg-neutral-900'>
+                    <div className='w-full ml-auto h-full flex  rounded-xl'>
                         <div className="  w-[22%] h-full flex flex-col">
-                            <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-200 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
+                            <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-100 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
                                 <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />
                                 <input
                                     ref={inputRef}
@@ -199,11 +199,11 @@ export default function Home() {
                                 updateGraphWithSearchTerm("")
                                 inputRef.current.value = ""
                             }} className='  ml-7 mt-auto mr-auto px-2  flex flex-row border py-1 items-center rounded-lg hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mr-2' /><p className=' mx-auto'>Restore filter</p></button>
-                            <div className='info w-full h-[20vh] ml-7  border-neutral-20 flex p-2 '>
+                            <div className='info w-full h-[20vh] ml-7  border-neutral-100 flex p-2 '>
                                 {nodeHover &&
                                     <div className=' flex flex-col h-full w-full mt-auto'>
                                         <p className=' my-auto tracking-widest'> Node: {nodeHover.id}</p>
-                                        <p className=' my-auto  text-neutral-400'>{nodeHover.label}</p>
+                                        <p className=' my-auto '>{nodeHover.label}</p>
                                         <Link className=' my-auto ' href={nodeHover.link}><FaExternalLinkAlt className=' hover:opacity-50 ease-in-out duration-200' /></Link>
                                     </div>
                                 }

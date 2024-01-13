@@ -45,7 +45,7 @@ function Experience() {
 
     <>
       <MagneticBig>
-        {Loaded ? <div ref={effect2} className=' text-neutral-100 text-sm h-full w-full lg:flex lg:flex-col hidden rounded-2xl font-light p-3 bg-neutral-900 '>
+        {Loaded ? <div ref={effect2} className=' text-sm h-full w-full lg:flex  lg:flex-col hidden rounded-2xl font-light p-3 shadow-2xl dark:shadow-none bg-slate-600 text-slate-100 dark:bg-neutral-900 dark:text-neutral-100 '>
 
 
           <div className=' flex w-full h-[5%] '>
@@ -63,7 +63,7 @@ function Experience() {
               </div>
             </div>
             <div className=' experience flex col-span-1 row-span-1 justify-center items-center'>
-              <p className='exp opacity-0  text-2xl xl:text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2 text-neutral-100 hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
+              <p className='exp opacity-0  text-2xl xl:text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2  hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
             </div>
             <div className=' experience h-full flex border-l flex-col row-span-2 col-span-2  p-10'>
               <p className='exp opacity-0  tracking-widest leading-relaxed text-4xl underline  '>{modules.headlines[index]} </p>

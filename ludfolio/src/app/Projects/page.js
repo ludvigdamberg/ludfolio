@@ -19,13 +19,13 @@ function Page() {
   }, [])
 
   return (
-    <div className=' w-full flex flex-col bg-neutral-950'>
+    <div className=' w-full flex flex-col bg-neutral-100 dark:bg-neutral-950 dark:text-neutral-100 text-neutral-950'>
     <Loader/>
     <Header/>
     <Projects/>
     <div className=' h-[20vh] hidden md:flex flex-col mx-auto my-5  items-center justify-center'>
-      <p className=' text-xl text-neutral-200 flex font-light'> <FaMagnifyingGlass className=' text-lg  mr-2 my-auto'/> Did you find what you were looking for?</p>
-      <p className='text-neutral-200 flex font-light mt-5'> I will update it soon with new projects</p>
+      <p className=' text-xl  flex font-light'> <FaMagnifyingGlass className=' text-lg  mr-2 my-auto'/> Did you find what you were looking for?</p>
+      <p className=' flex font-light mt-5'> I will update it soon with new projects</p>
 
     </div>
     <Footer/>    
