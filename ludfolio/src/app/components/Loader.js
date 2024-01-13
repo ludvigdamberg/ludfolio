@@ -10,9 +10,9 @@ function Loader() {
 
     const tl = gsap.timeline()
     const tl2 = gsap.timeline()
-    tl2.to(".heart", { delay:0.1, duration:0.5, y:300 ,ease: "back.in"  })
-    tl.fromTo(".load",{y:-150}, {delay:0.1, duration: 0.5, y: 0, ease: "back.out", opacity: 1, stagger: 0.1 })
-    tl.to(loader.current,{ height: 0, duration: 0.5,delay:0.2 ,ease: "power3.in"})
+    tl2.to(".heart", {duration:0.4, y:300 ,ease: "back.in"  })
+    tl.fromTo(".load",{y:-150}, { duration: 0.4, y: 0, ease: "back.out", opacity: 1, stagger: 0.1 })
+    tl.to(loader.current,{ height: 0, duration: 0.4,delay:0.2 ,ease: "power3.in"})
    
   }, [])
 
