@@ -55,9 +55,9 @@ function Landing() {
                     <div className=' w-full h-full  p-5'>
                         {/* Grid container 3 */}
                         <div className=' w-auto h-auto flex '>
-                            <div className='logo opacity-0 ml-auto flex mx-2'><p className=' my-auto flex'>Norrköping, Sweden</p></div>
-                            <div className='logo opacity-0 flex mx-2 mr-5 xl:mr-0  w-[10%]'><p className=' my-auto flex'>{ctime}</p></div>
-                            <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
+                            <div className='logo opacity-0 ml-auto flex '><p className=' my-auto flex'>Norrköping, Sweden</p></div>
+                            <div className='logo opacity-0 flex mx-2 xl:mr-0  w-[15%] justify-center'><p className=' my-auto flex'>{ctime}</p></div>
+                            <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3  border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
                         </div>
                         <div className=' w-auto h-auto text-base flex ml-auto mt-5'>
                         
