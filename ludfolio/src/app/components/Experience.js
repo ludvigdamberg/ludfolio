@@ -66,8 +66,8 @@ function Experience() {
               <p className='exp opacity-0  text-2xl xl:text-4xl flex flex-row'>{modules.icons[index].map((icon, i) => <p key={i} className=' mx-2  hover:text-yellow-500 ease-in-out duration-200'>{icon}</p>)}</p>
             </div>
             <div className=' experience h-full flex border-l flex-col row-span-2 col-span-2  p-10'>
-              <p className='exp opacity-0  tracking-widest leading-relaxed text-4xl underline  '>{modules.headlines[index]} </p>
-              <p className='exp opacity-0  tracking-widest leading-relaxed text-base xl:text-xl mt-10  '>{modules.bigtext[index]} </p>
+              <p className='exp opacity-0  tracking-widest leading-relaxed text-3xl underline  '>{modules.headlines[index]} </p>
+              <p className='exp opacity-0  tracking-widest leading-relaxed text-base xl:text-lg mt-10  '>{modules.bigtext[index]} </p>
               <p className='exp opacity-0  xl:tracking-widest leading-loose text-sm my-auto  '>{modules.smalltext[index]}</p>
             </div>
 
