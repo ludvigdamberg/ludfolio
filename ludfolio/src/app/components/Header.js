@@ -14,6 +14,7 @@ function Header() {
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setTheme(true)
+            gsap.to(".switch", {x:18, duration:0.1,ease:"power3.out"})
         } else {
             document.documentElement.classList.remove('dark')
         }
