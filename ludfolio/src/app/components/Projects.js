@@ -11,7 +11,7 @@ async function Projects() {
 
   return (
 
-    <div className=' w-screen h-auto flex flex-col text-sm font-light 2xl:p-20 p-5'>
+    <div className=' w-screen h-auto flex-col text-sm font-light 2xl:p-20 p-5'>
       <div className='hidden md:flex w-full h-auto 2xl:px-10 px-2'>
         <p className='  tracking-wider mr-2 '>ludfolio</p>
         <p className=' mx-2 my-auto'>/</p>

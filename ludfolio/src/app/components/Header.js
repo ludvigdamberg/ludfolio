@@ -2,19 +2,20 @@
 import gsap from 'gsap';
 import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
+import { FaArtstation, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 function Header() {
 
     const [expanded, setExpanded] = useState(false)
     const [theme, setTheme] = useState(false)
 
-
+ 
     const themeCheck = () => {
 
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark')
             setTheme(true)
-            gsap.to(".switch", {x:18, duration:0.1,ease:"power3.out"})
+            gsap.to(".switch", { x: 18, duration: 0.1, ease: "power3.out" })
         } else {
             document.documentElement.classList.remove('dark')
         }
@@ -60,13 +61,13 @@ function Header() {
             document.documentElement.classList.add('dark')
             localStorage.theme = 'dark'
             setTheme(true)
-            gsap.to(".switch", {x:18, duration:0.1,ease:"power3.out"})
+            gsap.to(".switch", { x: 18, duration: 0.1, ease: "power3.out" })
             return
         } else {
             document.documentElement.classList.remove('dark')
             localStorage.theme = 'light'
             setTheme(false)
-            gsap.to(".switch", {x:0, duration:0.1,ease:"power3.out"})
+            gsap.to(".switch", { x: 0, duration: 0.1, ease: "power3.out" })
             return
         }
 
@@ -75,8 +76,8 @@ function Header() {
 
     return (
 
-        <div className='  w-[90%] mx-auto h-[10vh] flex text-sm font-light'>
-            <div className='animat h-0 w-[90%] fixed z-40 mx-auto overflow-hidden flex-col rounded-b-2xl text-neutral-950 dark:text-neutral-100 bg-white dark:bg-black '>
+        <div className='  w-[90%] mx-auto h-[10vh] flex text-sm font-light px-5'>
+            <div className='animat h-0 w-[90%] fixed z-40 mx-auto overflow-hidden flex-col rounded-b-2xl text-neutral-950 dark:text-neutral-200 dark:bg-black '>
                 <div className=' h-full flex flex-col '>
                     <Link className='group links opacity-0 mt-16 border-t  flex mx-10' href={"/Projects"}><p className='  mx-2 '> Projects</p> </Link>
                     <button onClick={() => handleContactClick()} className='group links opacity-0 mt-16 border-t  flex mx-10'> <p className='  mx-2 '> Contact</p> </button>
@@ -84,15 +85,24 @@ function Header() {
                     <p className='group links opacity-0 mt-16 border-t flex mx-10'>created by: Ludvig Damberg</p>
                 </div>
             </div>
-            <div className='  w-full h-full hidden lg:flex  lg:px-5 '>
-                <div className=' w-auto mx-2 my-auto  flex rounded-md border border-neutral-950 dark:border-neutral-100 px-3'>
+            <div className='  w-full h-full hidden lg:flex '>
+                <div className=' w-auto mx-2 my-auto  flex rounded-md border border-neutral-950 dark:border-neutral-200 px-3'>
                     <p className=' '>Links</p>
                 </div>
-                <div className=' w-auto mx-2 my-auto flex px-3  '>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="/Projects">Projects </Link>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/">LinkedIn </Link>
-                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
+                <div className=' w-auto mx-2 my-auto flex  '>
                     <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100  z-20 ' href="/">Home </Link>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="/Projects"> Projects </Link>
+                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
+                </div>
+                <div className=' w-auto mx-2 my-auto flex'>
+                    <p className=' my-auto  '>|</p>
+                </div>
+                <div className=' w-auto mx-2 my-auto flex  '>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-2' /> </Link>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20' href="https://www.artstation.com/ludvigdamberg"><FaLinkedin className=' mx-2' /></Link>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://github.com/ludvigdamberg"><FaGithub className=' mx-2' /></Link>
+                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/"><FaArtstation className=' mx-2' /></Link>
+
                 </div>
                 <div className=' flex ml-auto'><button onClick={() => switchTheme()} className=' my-auto flex rounded-full border border-bg-950 dark:border-bg-100 border-neutral-950 dark:border-neutral-100 w-10 '><div className='switch h-5 w-5 rounded-full dark:bg-neutral-100 bg-neutral-900'></div></button></div>
             </div>

@@ -19,7 +19,7 @@ function Page() {
   }, [])
 
   return (
-    <div className=' w-full flex flex-col bg-neutral-100 dark:bg-neutral-950 dark:text-neutral-100 text-neutral-950'>
+    <div className=' w-full flex flex-col bg-neutral-200 dark:bg-neutral-950 dark:text-neutral-200 text-neutral-950'>
     <Loader/>
     <Header/>
     <Projects/>

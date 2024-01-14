@@ -61,7 +61,7 @@ function Page({ params }) {
 
     return (<>
         {loaded &&
-            <div className=' w-full h-auto flex flex-col bg-neutral-100 dark:bg-neutral-950 dark:text-neutral-100 text-neutral-950 font-light'>
+            <div className=' w-full h-auto flex flex-col bg-neutral-200 dark:bg-neutral-950 dark:text-neutral-200 text-neutral-950 font-light'>
                 <Loader />
                 <Header />
                 <div className=' flex  h-auto mt-10 mx-auto text-xs '>

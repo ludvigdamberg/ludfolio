@@ -42,7 +42,7 @@ function Base() {
         // Animate current card out
         tl.to(".card", { scale: 0.7, duration: 0.3, ease: "power2.out" });
         tl.to(".card", {
-            x: -2000, duration: 0.5, ease: "power2.in", onComplete: () => {
+            x: 2000, duration: 0.5, ease: "power2.in", onComplete: () => {
                 setTimeout(() => {
                     const temp = Index
                     const tl2 = gsap.timeline();
@@ -51,7 +51,7 @@ function Base() {
                     } else {
                         setIndex((prevIndex) => (prevIndex - 1));
                     }
-                    tl2.fromTo(".card", { x: 2000, opacity: 1, delay: 0.1 }, { x: 0, duration: 0.8, ease: "power2.out" })
+                    tl2.fromTo(".card", { x: -2000, opacity: 1, delay: 0.1 }, { x: 0, duration: 0.8, ease: "power2.out" })
                     tl2.to(".card", { scale: 1, duration: 0.2, ease: "power2.out" })
 
                 }, 200)
