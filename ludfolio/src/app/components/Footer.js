@@ -6,8 +6,8 @@ import { SiNextdotjs, SiSanity, SiTailwindcss } from "react-icons/si";
 
 function Footer() {
   return (
-    <div className=' z-40 h-[55vh] w-full flex  items-center sm text-neutral-200  '>
-      <div className=' z-40 bg-neutral-900 lg:px-20 px-5 py-5  grid grid-rows-3 w-full h-full'>
+    <div className='  h-[55vh] w-full flex items-center text-neutral-200  '>
+      <div className='  bg-neutral-900 lg:px-20 px-5 py-5  grid grid-rows-3 w-full h-full'>
         <div className='flex flex-row h-full w-full border-t border-b bo border-opacity-50'>
           <p className=' text-xl tracking-wider text-center '>built with</p>
           <div className=' flex flex-col lg:flex-row ml-auto my-auto'>
@@ -17,7 +17,7 @@ function Footer() {
           </div>
 
         </div>
-        <div className=' z-40 flex flex-row  w-full h-full border-b bo border-opacity-50'>
+        <div className='  flex flex-row  w-full h-full border-b bo border-opacity-50'>
           <p className=' text-xl  tracking-wider text-center'>links</p>
           <div className=' flex flex-col lg:flex-row ml-auto my-auto'>
             <Link className=' lg:mx-5 group  tracking-wider mt-1 lg:mt-5  flex items-center hover:text-yellow-300 ease-in-out duration-150' href="/">home <MdOutlineArrowOutward className='group-hover:rotate-45 group-hover:text-neutral-300 ease-in-out duration-100 mx-2' /></Link>
@@ -28,7 +28,7 @@ function Footer() {
           </div>
 
         </div>
-        <div className=' z-40 flex flex-row  h-full w-full border-b border-opacity-50'>
+        <div className=' flex flex-row  h-full w-full border-b border-opacity-50'>
           <p className=' text-xl  tracking-wider text-center '>social</p>
           <div className=' flex flex-col lg:flex-row ml-auto my-auto'>
             <Link className=' lg:mx-5 tracking-wider mt-1 lg:mt-5  flex items-center hover:text-pink-500 ease-in-out duration-150' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-2' /> Instagram</Link>

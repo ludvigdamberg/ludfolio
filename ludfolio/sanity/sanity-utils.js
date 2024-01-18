@@ -17,10 +17,11 @@ export async function getProjects() {
             name,
             "slug": slug.current,
             "image": image.asset->url,
+            "images": images[].asset->url,
             description,
             tech,
             url,
-            content,
+            content
         }`
     )
 }

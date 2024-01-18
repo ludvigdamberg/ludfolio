@@ -4,12 +4,23 @@ import Link from 'next/link'
 import React, { useEffect, useState } from 'react'
 import { FaArtstation, FaGithub, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
-function Header() {
+const Header = ({ onLinkChange }) => {
 
     const [expanded, setExpanded] = useState(false)
     const [theme, setTheme] = useState(false)
 
- 
+    const [currentLink, setCurrentLink] = useState('');
+
+    const handleLinkChange = (newLink) => {
+        if (newLink != currentLink) {
+            setCurrentLink(newLink)
+            onLinkChange(newLink)
+            setCurrentLink(newLink)
+        }
+
+    };
+
+
     const themeCheck = () => {
 
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
@@ -90,18 +101,18 @@ function Header() {
                     <p className=' '>Links</p>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex  '>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100  z-20 ' href="/">Home </Link>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 ' href="/Projects"> Projects </Link>
+                    <a onClick={() => handleLinkChange("home")} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100  z-20 ' >Home </a>
+                    <a onClick={() => handleLinkChange("projects")} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 '> Projects </a>
                     <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 ' href="/Contact">Contact </button>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex'>
                     <p className=' my-auto  '>|</p>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex  '>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-2' /> </Link>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20' href="https://www.artstation.com/ludvigdamberg"><FaLinkedin className=' mx-2' /></Link>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://github.com/ludvigdamberg"><FaGithub className=' mx-2' /></Link>
-                    <Link className=' mx-3 px-1 rounded-md my-auto dark:hover:text-yellow-500 hover:text-orange-500 ease-in-out duration-100 z-20 ' href="https://www.linkedin.com/in/ludvigdamberg/"><FaArtstation className=' mx-2' /></Link>
+                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-1' /> </Link>
+                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200' href="https://www.artstation.com/ludvigdamberg"><FaLinkedin className=' mx-1' /></Link>
+                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://github.com/ludvigdamberg"><FaGithub className=' mx-1' /></Link>
+                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://www.linkedin.com/in/ludvigdamberg/"><FaArtstation className=' mx-1' /></Link>
 
                 </div>
                 <div className=' flex ml-auto'><button onClick={() => switchTheme()} className=' my-auto flex rounded-full border border-bg-950 dark:border-bg-100 border-neutral-950 dark:border-neutral-100 w-10 '><div className='switch h-5 w-5 rounded-full dark:bg-neutral-100 bg-neutral-900'></div></button></div>

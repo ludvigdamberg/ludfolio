@@ -17,7 +17,7 @@ function Landing() {
 
         const tl = gsap.timeline()
 
-        tl.fromTo(".logo", { y: 20 }, { duration: 0.5, y: 0, delay: 1.2, ease: "back.out", opacity: 1, stagger: 0.05 })
+        tl.fromTo(".logo", { y: 20 }, { duration: 0.5, y: 0, delay: 0.9, ease: "back.out", opacity: 1, stagger: 0.05 })
 
 
     }, [])
@@ -47,9 +47,9 @@ function Landing() {
                     <div className=' flex flex-col text-base  p-5 justify-end'>
                         {/* Grid container 2 */}
                         <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
-                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  text-orange-500 dark:text-yellow-500  mr-2 my-auto' /> final semester of masters in data science</p>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-orange-500 dark:text-yellow-500  mr-2 my-auto' /> fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
-                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-orange-500 dark:text-yellow-500  mr-2 my-auto' /> student help <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
+                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> final semester of masters in data science</p>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
+                        <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> student help <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                     </div>
                     <div className=' w-full h-full  p-5'>
                         {/* Grid container 3 */}
@@ -60,10 +60,10 @@ function Landing() {
                         </div>
                         <div className=' w-auto h-auto text-base flex ml-auto mt-5'>
                         
-                                <Link className='logo opacity-0 ml-auto flex mx-3' href={"https://github.com/ludvigdamberg"}><FaSquareGithub className=' dark:hover:text-yellow-500 hover:text-orange-500' /></Link>
-                                <Link className='logo opacity-0 flex mx-3' href={"https://www.artstation.com/ludvigdamberg"}><FaLinkedin className=' dark:hover:text-yellow-500 hover:text-orange-500' /></Link>
-                                <Link className='logo opacity-0 flex mx-3' href={"https://github.com/ludvigdamberg/ludfolio"}><FaCode className=' dark:hover:text-yellow-500 hover:text-orange-500' /></Link>          
-                                <Link className='logo opacity-0 flex mx-3' href={"https://www.instagram.com/ludvigdamberg/"}><FaInstagram className=' dark:hover:text-yellow-500 hover:text-orange-500' /></Link>
+                                <Link className='logo opacity-0 ml-auto flex mx-3' href={"https://github.com/ludvigdamberg"}><FaSquareGithub className=' dark:hover:text-purple-500 hover:text-yellow-500' /></Link>
+                                <Link className='logo opacity-0 flex mx-3' href={"https://www.artstation.com/ludvigdamberg"}><FaLinkedin className=' dark:hover:text-purple-500 hover:text-yellow-500' /></Link>
+                                <Link className='logo opacity-0 flex mx-3' href={"https://github.com/ludvigdamberg/ludfolio"}><FaCode className=' dark:hover:text-purple-500 hover:text-yellow-500' /></Link>          
+                                <Link className='logo opacity-0 flex mx-3' href={"https://www.instagram.com/ludvigdamberg/"}><FaInstagram className=' dark:hover:text-purple-500 hover:text-yellow-500' /></Link>
                         </div>
                     </div>
                     <div className=' flex flex-col  p-5'>
