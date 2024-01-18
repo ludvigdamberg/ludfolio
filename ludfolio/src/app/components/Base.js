@@ -5,6 +5,7 @@ import Experience from './Experience'
 import Graph from './Graph'
 import gsap from 'gsap'
 import { LuMoveLeft, LuMoveRight } from "react-icons/lu";
+import { SiD3Dotjs, SiNextdotjs, SiSanity, SiTailwindcss } from 'react-icons/si'
 
 function Base() {
 
@@ -69,9 +70,9 @@ function Base() {
             </div>
 
             <div className='lg:grid lg:grid-cols-3 w-[90%] mx-auto my-auto hidden'>
-                <div className=' flex flex-row'>
+                <div className=' flex  rounded-md py-2 w-[50%] '>
                     {/* container 1 */}
-                    <p className=' my-auto '>tech stack: nextjs, d3, sanity.io</p>
+                    <p className=' my-auto flex  '> <SiSanity className=' mx-2 '/> <SiNextdotjs className=' mx-1 '/> <SiD3Dotjs className=' mx-2 '/>  <SiTailwindcss className=' mx-2 '/></p>
                 </div>
                 <div className=' flex flex-row justify-center'>
                     {/* container 2 */}
@@ -81,7 +82,6 @@ function Base() {
                 </div>
                 <div className=' flex flex-row '>
                     {/* container 3 */}
-                    <p className=' my-auto ml-auto'>created by: Ludvig Damberg</p>
                 </div>
             </div>
 
