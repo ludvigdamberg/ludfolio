@@ -1,16 +1,13 @@
 "use client"
 import React, { useLayoutEffect, useRef } from 'react'
 import gsap from 'gsap'
-import SplitType from 'split-type'
 
 function Loader( {link}) {
   const loader = useRef()
 
   useLayoutEffect(() => {
 
-    const Text = new SplitType("#text")
 
-    const tl = gsap.timeline()
     const tl2 = gsap.timeline()
     tl2.to(loader.current,{ height: "100vh", duration: 0.5,})
     tl2.fromTo(".load",{y:160}, { duration: 0.4, y: 0, ease: "power3.out" })

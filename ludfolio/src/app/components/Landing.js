@@ -46,7 +46,7 @@ function Landing() {
                     </div>
                     <div className=' flex flex-col text-base  p-5 justify-end'>
                         {/* Grid container 2 */}
-                        <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>Currently working on:</p>
+                        <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>currently working on:</p>
                         <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> final semester of masters in data science</p>
                         <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
                         <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-yellow-500 dark:text-purple-500  mr-2 my-auto' /> student help <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
@@ -54,7 +54,7 @@ function Landing() {
                     <div className=' w-full h-full  p-5'>
                         {/* Grid container 3 */}
                         <div className=' w-auto h-auto flex '>
-                            <div className='logo opacity-0 ml-auto flex '><p className=' my-auto flex'>norrköping, Sweden</p></div>
+                            <div className='logo opacity-0 ml-auto flex '><p className=' my-auto flex'>norrköping, sweden</p></div>
                             <div className='logo opacity-0 flex mx-2 xl:mr-0 lg:w-[22%]  xl:w-[18%] justify-center'><p className=' my-auto flex'>{ctime}</p></div>
                             <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 border rounded-2xl flex'><p className=' mx-1'>my resume</p> <PiFilePdf className=' my-auto' /></a>
                         </div>
