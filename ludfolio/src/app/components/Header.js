@@ -111,10 +111,10 @@ const Header = ({ onLinkChange }) => {
                     <p className=' my-auto  '>|</p>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex  '>
-                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-1' /> </Link>
-                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200' href="https://www.linkedin.com/in/ludvigdamberg/ "><FaLinkedin className=' mx-1' /></Link>
-                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://github.com/ludvigdamberg"><FaGithub className=' mx-1' /></Link>
-                    <Link className=' mx-3 py-1 rounded-md my-auto dark:hover:text-purple-500 hover:text-blue-500 ease-in-out duration-100 z-20 border border-neutral-950 dark:border-neutral-200 ' href="https://www.artstation.com/ludvigdamberg"><FaArtstation className=' mx-1' /></Link>
+                    <Link className=' mx-2 py-[4px] rounded-md my-auto z-20 border bg-slate-600 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-950 text-xs hover:scale-110 duration-200 ' href="https://www.instagram.com/ludvigdamberg/"><FaInstagram className=' mx-1' /> </Link>
+                    <Link className=' mx-2 py-[4px] rounded-md my-auto z-20 border bg-slate-600 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-950 text-xs hover:scale-110 duration-200' href="https://www.linkedin.com/in/ludvigdamberg/ "><FaLinkedin className=' mx-1' /></Link>
+                    <Link className=' mx-2 py-[4px] rounded-md my-auto z-20 border bg-slate-600 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-950 text-xs hover:scale-110 duration-200 ' href="https://github.com/ludvigdamberg"><FaGithub className=' mx-1' /></Link>
+                    <Link className=' mx-2 py-[4px] rounded-md my-auto z-20 border bg-slate-600 dark:bg-neutral-200 text-neutral-200 dark:text-neutral-950 text-xs hover:scale-110 duration-200 ' href="https://www.artstation.com/ludvigdamberg"><FaArtstation className=' mx-1' /></Link>
 
 
                 </div>

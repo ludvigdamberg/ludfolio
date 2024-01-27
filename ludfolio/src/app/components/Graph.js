@@ -182,22 +182,19 @@ export default function Home() {
                 <div className=' w-full h-full  flex items-end justify-end '>
 
                     <div className='w-full ml-auto h-full flex  rounded-xl'>
-                        <div className="  w-[22%] h-full flex flex-col">
-                            <div className="group  ml-7 mt-7 flex h-10 justify-end rounded-3xl border border-neutral-100 items-center w-10 overflow-hidden hover:w-[100%] ease-in-out duration-500">
-                                <FaSearch className=" absolute mr-[11px] group-hover:rotate-90 ease-in-out duration-500" />
-                                <input
-                                    ref={inputRef}
-                                    onChange={(e) => {
-                                        updateGraphWithSearchTerm(e.target.value);
-                                    }}
-                                    className=" bg-transparent outline-none  w-full px-5   opacity-0 group-hover:opacity-100 ease-in-out duration-200"
-                                    type="text"
-                                    placeholder="Anything particular?"
-                                />
+                        <div className="  w-[22%] h-auto flex flex-col">
+                            <div className=" ml-7 mt-7 h-auto w-[100%]">
+                                <p onClick={() => updateGraphWithSearchTerm("experience")} className=' mx-1 px-1 py-1 my-1 text-xl font-semibold rounded-lg border border-neutral-200 text-neutral-200 dark:text-neutral-900'>about me</p>
+                                <button onClick={() => updateGraphWithSearchTerm("experience")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>companies</button>
+                                <button onClick={() => updateGraphWithSearchTerm("all courses")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>courses</button>
+                                <button onClick={() => updateGraphWithSearchTerm("frameworks")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>frameworks</button>
+                                <button onClick={() => updateGraphWithSearchTerm("graphical design")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>graphics</button>
+                                <button onClick={() => updateGraphWithSearchTerm("skills")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>skills</button>
+                                <button onClick={() => updateGraphWithSearchTerm("interests")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>interests</button>
+
                             </div>
                             <button onClick={() => {
                                 updateGraphWithSearchTerm("")
-                                inputRef.current.value = ""
                             }} className='  ml-7 mt-auto mr-auto px-2  flex flex-row border py-1 items-center rounded-lg hover:text-neutral-900 hover:bg-neutral-100 duration-200 ease-in-out'><FaFilter className=' text-md mr-2' /><p className=' mx-auto'>Restore filter</p></button>
                             <div className='info w-full h-[20vh] ml-7  border-neutral-100 flex p-2 '>
                                 {nodeHover &&
