@@ -91,9 +91,9 @@ const Header = ({ onLinkChange }) => {
         <div className='  w-[90%] mx-auto h-[10vh] flex text-sm font-light px-5'>
             <div className='animat h-0 w-[90%] fixed z-40 mx-auto overflow-hidden flex-col rounded-b-2xl text-neutral-950 dark:text-neutral-200 dark:bg-black '>
                 <div className=' h-full flex flex-col '>
-                    <Link className='group links opacity-0 mt-16 border-t  flex mx-10' href={"/Projects"}><p className='  mx-2 '> Projects</p> </Link>
+                    <a className='group links opacity-0 mt-16 border-t  flex mx-10' onClick={() => handleLinkChange("projects")}><p className='  mx-2 '> Projects</p> </a>
                     <button onClick={() => handleContactClick()} className='group links opacity-0 mt-16 border-t  flex mx-10'> <p className='  mx-2 '> Contact</p> </button>
-                    <Link className='group links opacity-0 mt-16 border-t  flex mx-10' href={"/"}> <p className='  mx-2 '> Home</p></Link>
+                    <a className='group links opacity-0 mt-16 border-t  flex mx-10' onClick={() => handleLinkChange("home")}> <p className='  mx-2 '> Home</p></a>
                     <p className='group links opacity-0 mt-16 border-t flex mx-10'>created by: Ludvig Damberg</p>
                 </div>
             </div>
