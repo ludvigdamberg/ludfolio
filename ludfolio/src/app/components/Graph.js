@@ -184,7 +184,7 @@ export default function Home() {
                     <div className='w-full ml-auto h-full flex  rounded-xl'>
                         <div className="  w-[22%] h-auto flex flex-col">
                             <div className=" ml-7 mt-7 h-auto w-[100%]">
-                                <p onClick={() => updateGraphWithSearchTerm("experience")} className=' mx-1 px-1 py-1 my-1 text-xl font-semibold rounded-lg border border-neutral-200 text-neutral-200 dark:text-neutral-900'>about me</p>
+                                <p onClick={() => updateGraphWithSearchTerm("experience")} className=' mx-1 px-2 py-2 my-1 text-xl font-semibold rounded-lg border border-neutral-200 text-neutral-200'>about me</p>
                                 <button onClick={() => updateGraphWithSearchTerm("experience")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>companies</button>
                                 <button onClick={() => updateGraphWithSearchTerm("all courses")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>courses</button>
                                 <button onClick={() => updateGraphWithSearchTerm("frameworks")} className=' mx-1 px-1 py-1 border border-neutral-200 rounded-2xl my-1 hover:border-yellow-500 ease-in-out duration-200'>frameworks</button>
