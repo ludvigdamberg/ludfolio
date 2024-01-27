@@ -47,7 +47,7 @@ function Landing() {
                     <div className=' flex flex-col text-base  p-5 justify-end'>
                         {/* Grid container 2 */}
                         <p className='logo opacity-0 underline my-2 tracking-tighter leading-relaxed flex'>currently working on:</p>
-                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  text-sky-500  mr-2 my-auto' /> final semester of masters in data science</p>
+                        <p className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><FaGraduationCap className='  text-sky-500  mr-2 my-auto' /> final semester of masters in media technology</p>
                         <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-sky-500  mr-2 my-auto' /> fullstack developer <Link href={"https://www.weknowit.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@weknowit</Link></div>
                         <div className='logo opacity-0  my-2 tracking-tighter leading-relaxed flex'><MdWork className='  text-sky-500  mr-2 my-auto' /> student help <Link href={"https://liu.se/"} className=" mx-1 hover:underline ease-in-out duration-200">@lithehack</Link></div>
                     </div>
