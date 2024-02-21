@@ -102,10 +102,10 @@ const Header = ({ onLinkChange }) => {
                     <p className=' '>Links</p>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex  '>
-                    <a onClick={() => handleLinkChange("home")} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100  z-20 ' >home </a>
-                    <a onClick={() => handleLinkChange("projects")} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 z-20 '> projects </a>
-                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100 ' href="/Contact">contact </button>
-                    <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 rounded-2xl flex dark:hover:bg-yellow-500 hover:bg-orange-500 ease-in-out duration-100'><p className=' mx-1'> resume</p></a>
+                    <a onClick={() => handleLinkChange("home")} className=' mx-3 px-1 rounded-md my-auto hover:bg-yellow-500 ease-in-out duration-100  z-20 ' >home </a>
+                    <a onClick={() => handleLinkChange("projects")} className=' mx-3 px-1 rounded-md my-auto hover:bg-yellow-500 ease-in-out duration-100 z-20 '> projects </a>
+                    <button onClick={() => handleContactClick()} className=' mx-3 px-1 rounded-md my-auto hover:bg-yellow-500 ease-in-out duration-100 ' href="/Contact">contact </button>
+                    <a href="assets/CV_eng.pdf" download="CV_eng.pdf" className=' py-[0.5px] px-3 mx-2 rounded-2xl border border-neutral-950 dark:border-neutral-200 flex hover:bg-yellow-500 ease-in-out duration-100'><p className=' mx-1'> resume</p></a>
                 </div>
                 <div className=' w-auto mx-2 my-auto flex'>
                     <p className=' my-auto  '>|</p>
